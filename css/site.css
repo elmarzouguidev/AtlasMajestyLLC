@@ -1,7 +1,6 @@
 /* ============================================================
    Atlas Majesty LLC — site.css
    One stylesheet, five layers: tokens, base, layout, components, utilities.
-   Brand tokens are defined here and nowhere else (see CLAUDE.md).
    ============================================================ */
 
 @layer tokens, base, layout, components, utilities;
