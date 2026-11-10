@@ -282,6 +282,10 @@ p {
   background-color: var(--brand-surface);
 }
 
+.section--surface-2 {
+  background-color: var(--brand-surface-2);
+}
+
 .section--blue-pale {
   background-color: var(--brand-tint);
 }
@@ -508,7 +512,7 @@ p {
 
 .badge--success {
   background: #ECFDF5;
-  color: var(--color-success);
+  color: #047857;
   border: 1px solid rgba(16,185,129,0.2);
 }
 

@@ -56,3 +56,21 @@ Static marketing site (HTML, CSS, vanilla JS) for **Atlas Majesty LLC**, an SEO 
 - JSON-LD: LocalBusiness/ProfessionalService and FAQPage on the homepage. Keep name, address, email and URL identical to the Brand section (NAP consistency).
 - When adding, removing or renaming a page, update `sitemap.xml` (lastmod = today) and internal links.
 - Legal pages: list any changed sentence in the report for manual review.
+- 
+## Design skills
+For any UI, layout, styling or redesign work, first read both skills in full and follow them:
+- `design-taste-frontend`
+- `better-ui`
+
+Priority when they conflict:
+1. This CLAUDE.md (brand colors, logo, SEO conventions, git rules) always wins.
+2. Then the skills, for layout, typography, spacing, components and interaction.
+3. Never replace brand tokens with a skill's default palette or fonts.
+
+Redesign constraints:
+- Keep all copy, URLs, page titles, meta tags, canonicals, JSON-LD and form fields unless a change is explicitly approved.
+- Keep one H1 per page and the existing H1/H2 wording (SEO), even if the visual hierarchy changes.
+- No frameworks or build step: plain HTML, CSS and vanilla JS only. No new external dependencies except Google Fonts.
+- Performance: no layout shift, lazy-load below-the-fold images, keep CSS/JS lean (Core Web Vitals matter for an SEO agency's own site).
+- Accessibility: WCAG AA contrast, visible focus states, keyboard-usable menus and FAQ, prefers-reduced-motion respected.
+- Header, mobile menu and footer are duplicated in every page: change them identically everywhere.

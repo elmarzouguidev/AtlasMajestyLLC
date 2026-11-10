@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "skills": {
+    "better-ui": {
+      "source": "jakubkrehel/skills",
+      "sourceType": "github",
+      "skillPath": "skills/better-ui/SKILL.md",
+      "computedHash": "8a21f243313aa3b7f6bb5e13d241eef07926fe52bc0a866d154a10f88b7c007a"
+    },
+    "design-taste-frontend": {
+      "source": "Leonxlnx/taste-skill",
+      "sourceType": "github",
+      "skillPath": "skills/taste-skill/SKILL.md",
+      "computedHash": "acda6bf83f200405aa200eb245448fdc11cfce43d97bc2d9b8bf13a27f362d95"
+    }
+  }
+}

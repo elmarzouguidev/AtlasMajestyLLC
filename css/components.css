@@ -779,7 +779,7 @@
   font-weight: var(--fw-bold);
   letter-spacing: var(--ls-widest);
   text-transform: uppercase;
-  color: var(--brand-tint-strong);
+  color: var(--brand-accent);
   margin-bottom: var(--space-2);
 }
 
@@ -983,7 +983,7 @@
 }
 
 .form-input::placeholder,
-.form-textarea::placeholder { color: var(--color-text-light); }
+.form-textarea::placeholder { color: var(--color-text-muted); }
 
 .form-input:focus,
 .form-select:focus,
@@ -1041,7 +1041,7 @@
 }
 
 .form--dark .form-input::placeholder,
-.form--dark .form-textarea::placeholder { color: rgba(255,255,255,0.3); }
+.form--dark .form-textarea::placeholder { color: rgba(255,255,255,0.6); }
 
 .form--dark .form-input:focus,
 .form--dark .form-select:focus,
