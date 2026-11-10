@@ -1,0 +1,27 @@
+name: Deployment to Hostinger
+on:
+  push:
+    branches:
+      - mainer
+jobs:
+  FTP-Deploy-Action:
+    name: FTP-Deploy-Action
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4.2.0
+        with:
+          fetch-depth: 2
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - name: Install NPM dependencies
+        run: npm install
+      - name: Build frontend assets
+        run: npm run build
+      - name: FTP-Deploy-Action
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER}}
+          username: ${{ secrets.FTP_USERNAME}}
+          password: ${{ secrets.FTP_PASSWORD }}

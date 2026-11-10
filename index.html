@@ -29,19 +29,14 @@
   <meta name="twitter:description" content="Professional SEO services in Albuquerque, NM. Improve Google rankings and grow your business. Free SEO audit available.">
   <meta name="twitter:image" content="https://www.atlasmajesty.com/images/og-image.jpg">
 
-  <!-- Fonts -->
+  <!-- Fonts: Outfit (headings) + Figtree (text), only the weights in use -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400..500&family=Figtree:wght@400..500&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400..500&family=Figtree:wght@400..500&display=swap" rel="stylesheet"></noscript>
 
-  <!-- Stylesheets -->
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/components.css">
-  <link rel="stylesheet" href="css/pages.css">
-  <link rel="stylesheet" href="css/interactive.css">
-
-  <!-- Favicon placeholder -->
-  <!-- <link rel="icon" type="image/png" href="images/favicon.png"> -->
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/site.css">
 
   <!-- Google Analytics Placeholder -->
   <!-- Replace GA_MEASUREMENT_ID with your actual Google Analytics ID -->
@@ -190,628 +185,269 @@
 </head>
 
 <body>
+<a class="skip-link" href="#top">Skip to content</a>
 
-<!-- ============================================================
-     NAVIGATION
-     ============================================================ -->
-<nav id="site-nav" aria-label="Main navigation">
-  <div class="nav-container">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></symbol>
+    <symbol id="i-file" viewBox="0 0 24 24"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="16" x2="8" y1="13" y2="13"/><line x1="16" x2="8" y1="17" y2="17"/></symbol>
+    <symbol id="i-key" viewBox="0 0 24 24"><circle cx="7.5" cy="15.5" r="5.5"/><path d="m21 2-9.6 9.6"/><path d="m15.5 7.5 3 3L22 7l-3-3"/></symbol>
+    <symbol id="i-pen" viewBox="0 0 24 24"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></symbol>
+    <symbol id="i-link" viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></symbol>
+    <symbol id="i-map" viewBox="0 0 24 24"><polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"/><line x1="9" x2="9" y1="3" y2="18"/><line x1="15" x2="15" y1="6" y2="21"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></symbol>
+    <symbol id="i-down" viewBox="0 0 24 24"><polyline points="22 17 13.5 8.5 8.5 13.5 2 7"/><polyline points="16 17 22 17 22 11"/></symbol>
+    <symbol id="i-up" viewBox="0 0 24 24"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></symbol>
+    <symbol id="i-trophy" viewBox="0 0 24 24"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></symbol>
+    <symbol id="i-bulb" viewBox="0 0 24 24"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></symbol>
+    <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></symbol>
+    <symbol id="i-sprout" viewBox="0 0 24 24"><path d="M7 20h10"/><path d="M10 20c5.5-2.5.8-6.4 3-10"/><path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z"/><path d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
+  </defs>
+</svg>
 
-    <!-- Logo -->
-    <a href="/" class="nav-logo" aria-label="Atlas Majesty LLC — Home">
-      <div class="nav-logo-icon"><img src="/images/brand/logo-mark-white.png" srcset="/images/brand/logo-mark-white.png 1x, /images/brand/logo-mark-white@2x.png 2x" width="44" height="24" alt="Atlas Majesty LLC"></div>
-      <div class="nav-logo-text">
-        <span class="nav-logo-name">Atlas Majesty</span>
-        <span class="nav-logo-tagline">SEO &amp; Digital Marketing</span>
-      </div>
+<!-- Header -->
+<header class="nav on-dark">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="Atlas Majesty LLC — Home">
+      <img src="/images/brand/logo-mark-white.png" srcset="/images/brand/logo-mark-white.png 1x, /images/brand/logo-mark-white@2x.png 2x" width="44" height="24" alt=""><span>Atlas Majesty</span>
     </a>
     <!-- TODO: phone (header) -->
-
-    <!-- Desktop Links -->
-    <div class="nav-links" role="navigation">
-
-      <a href="/" class="nav-link">Home</a>
-
-      <!-- Services Dropdown -->
-      <div class="nav-item--dropdown">
-        <button class="nav-link nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true">
-          SEO Services
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/>
-          </svg>
-        </button>
-        <div class="nav-dropdown" role="menu">
-          <div class="nav-dropdown-grid">
-            <a href="seo-services.html" class="nav-dropdown-item" role="menuitem">
-              <div class="nav-dropdown-item-icon">🔍</div>
-              <div class="nav-dropdown-item-text">
-                <strong>All SEO Services</strong>
-                <span>Overview of every service we offer</span>
-              </div>
-            </a>
-            <a href="local-seo.html" class="nav-dropdown-item" role="menuitem">
-              <div class="nav-dropdown-item-icon">📍</div>
-              <div class="nav-dropdown-item-text">
-                <strong>Local SEO</strong>
-                <span>Google Maps &amp; local search visibility</span>
-              </div>
-            </a>
-            <a href="technical-seo.html" class="nav-dropdown-item" role="menuitem">
-              <div class="nav-dropdown-item-icon">⚙️</div>
-              <div class="nav-dropdown-item-text">
-                <strong>Technical SEO</strong>
-                <span>Site architecture &amp; crawlability</span>
-              </div>
-            </a>
-            <a href="on-page-seo.html" class="nav-dropdown-item" role="menuitem">
-              <div class="nav-dropdown-item-icon">📄</div>
-              <div class="nav-dropdown-item-text">
-                <strong>On-Page SEO</strong>
-                <span>Keywords, metadata &amp; content</span>
-              </div>
-            </a>
-            <a href="seo-content.html" class="nav-dropdown-item" role="menuitem">
-              <div class="nav-dropdown-item-icon">✍️</div>
-              <div class="nav-dropdown-item-text">
-                <strong>SEO Content</strong>
-                <span>Content that attracts &amp; converts</span>
-              </div>
-            </a>
-            <a href="seo-audit.html" class="nav-dropdown-item" role="menuitem">
-              <div class="nav-dropdown-item-icon">📊</div>
-              <div class="nav-dropdown-item-text">
-                <strong>SEO Audit</strong>
-                <span>Identify your biggest opportunities</span>
-              </div>
-            </a>
+    <nav class="nav__links" aria-label="Main navigation">
+      <div class="nav__item" data-dd>
+        <button class="nav__link" type="button" aria-expanded="false" aria-controls="services-panel">SEO Services <svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg></button>
+        <div class="nav__panel" id="services-panel">
+          <div class="wrap">
+            <a href="seo-services.html"><strong>All SEO Services</strong><span>Overview of every service we offer</span></a>
+            <a href="local-seo.html"><strong>Local SEO</strong><span>Google Maps &amp; local search visibility</span></a>
+            <a href="technical-seo.html"><strong>Technical SEO</strong><span>Site architecture &amp; crawlability</span></a>
+            <a href="on-page-seo.html"><strong>On-Page SEO</strong><span>Keywords, metadata &amp; content</span></a>
+            <a href="seo-content.html"><strong>SEO Content</strong><span>Content that attracts &amp; converts</span></a>
+            <a href="seo-audit.html"><strong>SEO Audit</strong><span>Identify your biggest opportunities</span></a>
           </div>
         </div>
       </div>
-
-      <a href="local-seo.html" class="nav-link">Local SEO</a>
-      <a href="seo-audit.html" class="nav-link">Free Audit</a>
-      <a href="about.html" class="nav-link">About</a>
-      <a href="blog/index.html" class="nav-link">Blog</a>
+      <a class="nav__link" href="local-seo.html">Local SEO</a>
+      <a class="nav__link" href="about.html">About</a>
+      <a class="nav__link" href="blog/index.html">Blog</a>
+      <a class="nav__link" href="contact.html">Contact</a>
+    </nav>
+    <div class="nav__end">
+      <a class="btn btn--primary" href="seo-audit.html" id="nav-cta-btn">Get Free SEO Audit</a>
+      <button class="nav__toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="menu" aria-label="Open navigation menu"><svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg></button>
     </div>
+  </div>
+</header>
 
-    <!-- CTA -->
-    <div class="nav-cta">
-      <a href="contact.html" class="nav-link hide-mobile">Contact</a>
-      <a href="seo-audit.html" class="btn btn--primary btn--sm" id="nav-cta-btn"><span class="cta-label-full">Get Free SEO Audit</span><span class="cta-label-short">Free Audit</span></a>
-      <button id="menu-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
-        </svg>
-      </button>
+<!-- Full-screen menu -->
+<div class="sheet on-dark" id="menu" data-sheet role="dialog" aria-modal="true" aria-label="Navigation menu">
+  <div class="wrap">
+    <div class="sheet__top">
+      <a class="brand" href="/"><img src="/images/brand/logo-mark-white.png" srcset="/images/brand/logo-mark-white.png 1x, /images/brand/logo-mark-white@2x.png 2x" width="44" height="24" alt=""><span>Atlas Majesty</span></a>
+      <button class="nav__toggle" type="button" data-menu-close aria-label="Close navigation menu"><svg class="icon" aria-hidden="true"><use href="#i-x"/></svg></button>
     </div>
-
-  </div>
-</nav>
-
-<!-- Mobile Menu Overlay -->
-<div id="menu-overlay" aria-hidden="true"></div>
-
-<!-- Mobile Menu Drawer -->
-<div id="mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation menu">
-  <div class="mobile-menu-header">
-    <a href="/" class="nav-logo">
-      <div class="nav-logo-icon"><img src="/images/brand/logo-mark-white.png" srcset="/images/brand/logo-mark-white.png 1x, /images/brand/logo-mark-white@2x.png 2x" width="44" height="24" alt=""></div>
-      <div class="nav-logo-text">
-        <span class="nav-logo-name">Atlas Majesty</span>
-      </div>
-    </a>
-    <button id="menu-close" aria-label="Close navigation menu">✕</button>
-  </div>
-
-  <div class="mobile-nav-section">
-    <div class="mobile-nav-section-label">Main</div>
-    <a href="/" class="mobile-nav-link"><span class="icon">🏠</span> Home</a>
-    <a href="about.html" class="mobile-nav-link"><span class="icon">👥</span> About</a>
-    <a href="blog/index.html" class="mobile-nav-link"><span class="icon">📝</span> Blog</a>
-    <a href="contact.html" class="mobile-nav-link"><span class="icon">✉️</span> Contact</a>
-  </div>
-
-  <div class="mobile-nav-section">
-    <div class="mobile-nav-section-label">SEO Services</div>
-    <a href="seo-services.html" class="mobile-nav-link"><span class="icon">🔍</span> All SEO Services</a>
-    <a href="local-seo.html" class="mobile-nav-link"><span class="icon">📍</span> Local SEO</a>
-    <a href="technical-seo.html" class="mobile-nav-link"><span class="icon">⚙️</span> Technical SEO</a>
-    <a href="on-page-seo.html" class="mobile-nav-link"><span class="icon">📄</span> On-Page SEO</a>
-    <a href="seo-content.html" class="mobile-nav-link"><span class="icon">✍️</span> SEO Content</a>
-    <a href="seo-audit.html" class="mobile-nav-link"><span class="icon">📊</span> SEO Audit</a>
-  </div>
-
-  <div class="mobile-menu-footer">
-    <a href="seo-audit.html" class="btn btn--primary btn--full">Get Your Free SEO Audit <span class="arrow">→</span></a>
+    <div class="sheet__group">
+      <div class="sheet__title">SEO Services</div>
+      <a class="sheet__row" href="seo-services.html">All SEO Services</a>
+      <a class="sheet__row" href="local-seo.html">Local SEO</a>
+      <a class="sheet__row" href="technical-seo.html">Technical SEO</a>
+      <a class="sheet__row" href="on-page-seo.html">On-Page SEO</a>
+      <a class="sheet__row" href="seo-content.html">SEO Content</a>
+      <a class="sheet__row" href="seo-audit.html">SEO Audit</a>
+    </div>
+    <div class="sheet__group">
+      <div class="sheet__title">Company</div>
+      <a class="sheet__row" href="about.html">About</a>
+      <a class="sheet__row" href="blog/index.html">Blog</a>
+      <a class="sheet__row" href="contact.html">Contact</a>
+    </div>
+    <div class="sheet__bottom"><a class="btn btn--primary" href="seo-audit.html">Get Your Free SEO Audit <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
   </div>
 </div>
 
+<main id="top">
 
-<!-- ============================================================
-     HERO SECTION
-     ============================================================ -->
-<section class="hero bg-gradient-hero grid-pattern" aria-labelledby="hero-heading">
-  <div class="container">
-    <div class="hero-grid">
-
-      <!-- Hero Content -->
-      <div class="hero-content">
-        <div class="hero-badge" aria-label="SEO Company based in Albuquerque, New Mexico">
-          <span class="hero-badge-dot" aria-hidden="true"></span>
-          SEO Agency · Albuquerque, New Mexico
-        </div>
-
-        <h1 id="hero-heading" class="hero-title">
-          Get Found on Google.<br>
-          <span class="highlight">Get More Customers.</span>
-        </h1>
-
-        <p class="hero-subtitle">
-          SEO strategies designed to improve your online visibility, attract qualified organic traffic, and turn searchers into customers.
-        </p>
-
-        <div class="hero-ctas">
-          <a href="seo-audit.html" class="btn btn--primary btn--lg" id="hero-cta-primary">
-            Get Your Free SEO Audit <span class="arrow">→</span>
-          </a>
-          <a href="contact.html" class="btn btn--ghost btn--lg" id="hero-cta-secondary">
-            Talk to an SEO Specialist
-          </a>
-        </div>
-
-        <div class="hero-trust" role="list" aria-label="Trust signals">
-          <div class="hero-trust-item" role="listitem">
-            <span class="icon" aria-hidden="true">✓</span>
-            Customized SEO Strategies
-          </div>
-          <div class="hero-trust-item" role="listitem">
-            <span class="icon" aria-hidden="true">✓</span>
-            Data-Driven Approach
-          </div>
-          <div class="hero-trust-item" role="listitem">
-            <span class="icon" aria-hidden="true">✓</span>
-            Transparent Reporting
-          </div>
-        </div>
+<!-- Hero -->
+<section class="hero on-dark" aria-labelledby="hero-heading">
+  <div class="wrap">
+    <img class="hero__mark enter" style="--i:2" src="/images/brand/logo-mark-white@2x.png" width="717" height="386" alt="" aria-hidden="true" fetchpriority="low">
+    <div class="hero__main">
+      <div class="hero__notice enter" style="--i:0" aria-label="SEO Company based in Albuquerque, New Mexico">SEO Agency · Albuquerque, New Mexico</div>
+      <h1 id="hero-heading" class="enter" style="--i:1">Get Found on Google.<br><span class="run">Get More Customers.</span></h1>
+      <p class="hero__lead enter" style="--i:2">SEO strategies designed to improve your online visibility, attract qualified organic traffic, and turn searchers into customers.</p>
+      <div class="btn-row enter" style="--i:3">
+        <a href="seo-audit.html" class="btn btn--primary" id="hero-cta-primary" data-bar-hide>Get Your Free SEO Audit <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a href="contact.html" class="btn btn--secondary" id="hero-cta-secondary">Talk to an SEO Specialist</a>
       </div>
-
-      <!-- Hero Visual -->
-      <div class="hero-visual" aria-hidden="true">
-        <div class="hero-card hero-card--main">
-          <!-- Simulated SEO dashboard card -->
-          <div style="font-size:0.625rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.6);margin-bottom:1rem;">SEO Performance Dashboard</div>
-
-          <div class="hero-metric">
-            <div class="hero-metric-icon hero-metric-icon--blue">📈</div>
-            <div class="hero-metric-info">
-              <div class="hero-metric-label">Organic Traffic</div>
-              <div class="hero-metric-value">Growing</div>
-            </div>
-            <div class="hero-metric-change">↑ Trending Up</div>
-          </div>
-
-          <div class="hero-metric">
-            <div class="hero-metric-icon hero-metric-icon--amber">🔑</div>
-            <div class="hero-metric-info">
-              <div class="hero-metric-label">Keywords Ranking</div>
-              <div class="hero-metric-value">Page 1 Results</div>
-            </div>
-            <div class="hero-metric-change">↑ Improving</div>
-          </div>
-
-          <div class="hero-metric">
-            <div class="hero-metric-icon hero-metric-icon--green">📍</div>
-            <div class="hero-metric-info">
-              <div class="hero-metric-label">Local Visibility</div>
-              <div class="hero-metric-value">Google Maps Pack</div>
-            </div>
-            <div class="hero-metric-change">↑ Optimized</div>
-          </div>
-
-          <div class="hero-metric">
-            <div class="hero-metric-icon hero-metric-icon--blue">🎯</div>
-            <div class="hero-metric-info">
-              <div class="hero-metric-label">Lead Generation</div>
-              <div class="hero-metric-value">Qualified Leads</div>
-            </div>
-            <div class="hero-metric-change">↑ Increasing</div>
-          </div>
-        </div>
-      </div>
-
+    </div>
+    <div class="hero__facts enter" style="--i:4">
+      <ul aria-label="Trust signals">
+        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Customized SEO Strategies</li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Data-Driven Approach</li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Transparent Reporting</li>
+      </ul>
     </div>
   </div>
 </section>
 
-
-<!-- ============================================================
-     PROBLEM SECTION
-     ============================================================ -->
-<section class="problem-section section" aria-labelledby="problem-heading">
-  <div class="container">
-
-    <div class="section-header animate-on-scroll">
-      <div class="section-label section-label--white">The Challenge</div>
-      <h2 id="problem-heading" class="section-title section-title--white">
-        Is Your Business Being Found by the Right Customers?
-      </h2>
-      <p class="section-subtitle section-subtitle--white">
-        Most businesses lose potential customers every day simply because they aren't visible in Google search results. These are common challenges we help solve.
-      </p>
+<!-- The challenge -->
+<section class="section g-main" aria-labelledby="problem-heading">
+  <div class="wrap">
+    <div class="head">
+      <div class="label">The Challenge</div>
+      <h2 id="problem-heading">Is Your Business Being Found by the Right Customers?</h2>
     </div>
-
-    <div class="problem-grid">
-      <div class="problem-card animate-on-scroll delay-1">
-        <div class="problem-card-icon" aria-hidden="true">🔍</div>
-        <h3 class="problem-card-title">Low Search Visibility</h3>
-        <p class="problem-card-desc">Potential customers can't find your business when searching on Google, even for services you offer.</p>
-      </div>
-      <div class="problem-card animate-on-scroll delay-2">
-        <div class="problem-card-icon" aria-hidden="true">📉</div>
-        <h3 class="problem-card-title">Little Organic Traffic</h3>
-        <p class="problem-card-desc">Your website receives minimal visits from search engines, leaving you dependent on paid ads or word of mouth.</p>
-      </div>
-      <div class="problem-card animate-on-scroll delay-3">
-        <div class="problem-card-icon" aria-hidden="true">🏆</div>
-        <h3 class="problem-card-title">Competitors Outranking You</h3>
-        <p class="problem-card-desc">Competitors appear above you in search results, capturing customers who would otherwise choose your business.</p>
-      </div>
-      <div class="problem-card animate-on-scroll delay-4">
-        <div class="problem-card-icon" aria-hidden="true">📍</div>
-        <h3 class="problem-card-title">Weak Google Maps Presence</h3>
-        <p class="problem-card-desc">Your business doesn't appear prominently in Google Maps or local search results for nearby customers.</p>
-      </div>
-      <div class="problem-card animate-on-scroll delay-1">
-        <div class="problem-card-icon" aria-hidden="true">⚙️</div>
-        <h3 class="problem-card-title">Technical SEO Issues</h3>
-        <p class="problem-card-desc">Hidden technical problems prevent search engines from properly crawling, indexing, and understanding your website.</p>
-      </div>
-      <div class="problem-card animate-on-scroll delay-2">
-        <div class="problem-card-icon" aria-hidden="true">💡</div>
-        <h3 class="problem-card-title">Traffic That Doesn't Convert</h3>
-        <p class="problem-card-desc">Visitors land on your website but don't take action — because pages aren't optimized for the right audience or intent.</p>
-      </div>
+    <p class="statement" data-hl>Most businesses lose potential customers every day simply because they aren't visible in Google search results. These are common challenges we help solve.</p>
+    <div class="grid">
+      <div class="card span-4"><div class="tile-icon"><svg class="icon" aria-hidden="true"><use href="#i-search"/></svg></div><h3>Low Search Visibility</h3><p>Potential customers can't find your business when searching on Google, even for services you offer.</p></div>
+      <div class="card span-4"><div class="tile-icon"><svg class="icon" aria-hidden="true"><use href="#i-down"/></svg></div><h3>Little Organic Traffic</h3><p>Your website receives minimal visits from search engines, leaving you dependent on paid ads or word of mouth.</p></div>
+      <div class="card span-4"><div class="tile-icon"><svg class="icon" aria-hidden="true"><use href="#i-trophy"/></svg></div><h3>Competitors Outranking You</h3><p>Competitors appear above you in search results, capturing customers who would otherwise choose your business.</p></div>
+      <div class="card span-4"><div class="tile-icon"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg></div><h3>Weak Google Maps Presence</h3><p>Your business doesn't appear prominently in Google Maps or local search results for nearby customers.</p></div>
+      <div class="card span-4"><div class="tile-icon"><svg class="icon" aria-hidden="true"><use href="#i-code"/></svg></div><h3>Technical SEO Issues</h3><p>Hidden technical problems prevent search engines from properly crawling, indexing, and understanding your website.</p></div>
+      <div class="card span-4"><div class="tile-icon"><svg class="icon" aria-hidden="true"><use href="#i-bulb"/></svg></div><h3>Traffic That Doesn't Convert</h3><p>Visitors land on your website but don't take action — because pages aren't optimized for the right audience or intent.</p></div>
     </div>
-
-    <div style="text-align:center;margin-top:3rem;" class="animate-on-scroll">
-      <a href="seo-audit.html" class="btn btn--primary btn--lg" id="problem-cta">
-        Identify Your SEO Issues — Free Audit <span class="arrow">→</span>
-      </a>
-    </div>
-
+    <div class="btn-row mt-7"><a href="seo-audit.html" class="btn btn--primary" id="problem-cta">Identify Your SEO Issues — Free Audit <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
   </div>
 </section>
 
-
-<!-- ============================================================
-     SERVICES SECTION
-     ============================================================ -->
-<section class="section section--surface" aria-labelledby="services-heading">
-  <div class="container">
-
-    <div class="section-header animate-on-scroll">
-      <div class="section-label">What We Do</div>
-      <h2 id="services-heading" class="section-title">Comprehensive SEO Services That Drive Real Results</h2>
-      <p class="section-subtitle">
-        From technical foundations to local visibility to content strategy — we cover every dimension of SEO so your business grows in organic search.
-      </p>
+<!-- Services -->
+<section class="section g-alt" aria-labelledby="services-heading">
+  <div class="wrap">
+    <div class="head">
+      <div class="label">What We Do</div>
+      <h2 id="services-heading">Comprehensive SEO Services That Drive Real Results</h2>
+      <p>From technical foundations to local visibility to content strategy — we cover every dimension of SEO so your business grows in organic search.</p>
     </div>
-
-    <div class="grid grid--auto-3">
-
-      <article class="service-card animate-on-scroll delay-1">
-        <div class="service-card-icon" aria-hidden="true">📍</div>
-        <h3 class="service-card-title">Local SEO</h3>
-        <p class="service-card-desc">Improve your visibility in local Google searches and Google Maps so nearby customers can find your business first.</p>
-        <a href="local-seo.html" class="service-card-link" aria-label="Learn more about Local SEO services">Learn More <span aria-hidden="true">→</span></a>
-      </article>
-
-      <article class="service-card animate-on-scroll delay-2">
-        <div class="service-card-icon" aria-hidden="true">⚙️</div>
-        <h3 class="service-card-title">Technical SEO</h3>
-        <p class="service-card-desc">Strengthen the technical foundation of your website — crawlability, indexing, Core Web Vitals, site architecture, and more.</p>
-        <a href="technical-seo.html" class="service-card-link" aria-label="Learn more about Technical SEO services">Learn More <span aria-hidden="true">→</span></a>
-      </article>
-
-      <article class="service-card animate-on-scroll delay-3">
-        <div class="service-card-icon" aria-hidden="true">📄</div>
-        <h3 class="service-card-title">On-Page SEO</h3>
-        <p class="service-card-desc">Optimize your website pages around the right keywords and search intent so search engines and visitors understand your content.</p>
-        <a href="on-page-seo.html" class="service-card-link" aria-label="Learn more about On-Page SEO services">Learn More <span aria-hidden="true">→</span></a>
-      </article>
-
-      <article class="service-card animate-on-scroll delay-1">
-        <div class="service-card-icon" aria-hidden="true">🔑</div>
-        <h3 class="service-card-title">Keyword Research</h3>
-        <p class="service-card-desc">Identify the exact search terms your target customers are using — and build your SEO strategy around the opportunities that matter.</p>
-        <a href="seo-services.html#keyword-research" class="service-card-link" aria-label="Learn more about Keyword Research">Learn More <span aria-hidden="true">→</span></a>
-      </article>
-
-      <article class="service-card animate-on-scroll delay-2">
-        <div class="service-card-icon" aria-hidden="true">✍️</div>
-        <h3 class="service-card-title">SEO Content</h3>
-        <p class="service-card-desc">Develop strategic content that attracts qualified organic visitors, answers real customer questions, and supports conversions.</p>
-        <a href="seo-content.html" class="service-card-link" aria-label="Learn more about SEO Content services">Learn More <span aria-hidden="true">→</span></a>
-      </article>
-
-      <article class="service-card animate-on-scroll delay-3">
-        <div class="service-card-icon" aria-hidden="true">🔗</div>
-        <h3 class="service-card-title">Link Building</h3>
-        <p class="service-card-desc">Build domain authority through a sustainable strategy focused on acquiring relevant, quality backlinks that strengthen your rankings.</p>
-        <a href="seo-services.html#link-building" class="service-card-link" aria-label="Learn more about Link Building services">Learn More <span aria-hidden="true">→</span></a>
-      </article>
-
-      <article class="service-card animate-on-scroll delay-1">
-        <div class="service-card-icon" aria-hidden="true">🗺️</div>
-        <h3 class="service-card-title">Google Business Profile</h3>
-        <p class="service-card-desc">Optimize your Google Business Profile to improve local search presence, attract more calls, and drive foot traffic.</p>
-        <a href="local-seo.html#gbp" class="service-card-link" aria-label="Learn more about Google Business Profile optimization">Learn More <span aria-hidden="true">→</span></a>
-      </article>
-
-      <article class="service-card animate-on-scroll delay-2">
-        <div class="service-card-icon" aria-hidden="true">📊</div>
-        <h3 class="service-card-title">SEO Audits</h3>
-        <p class="service-card-desc">Get a comprehensive analysis of your website's technical health, content quality, keyword positioning, and growth opportunities.</p>
-        <a href="seo-audit.html" class="service-card-link" aria-label="Learn more about SEO Audit services">Learn More <span aria-hidden="true">→</span></a>
-      </article>
-
+    <div class="grid">
+      <article class="card card--link span-3"><div class="tile-icon"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg></div><h3>Local SEO</h3><p>Improve your visibility in local Google searches and Google Maps so nearby customers can find your business first.</p><a href="local-seo.html" class="link-more" aria-label="Learn more about Local SEO services">Learn More <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></article>
+      <article class="card card--link span-3"><div class="tile-icon"><svg class="icon" aria-hidden="true"><use href="#i-code"/></svg></div><h3>Technical SEO</h3><p>Strengthen the technical foundation of your website — crawlability, indexing, Core Web Vitals, site architecture, and more.</p><a href="technical-seo.html" class="link-more" aria-label="Learn more about Technical SEO services">Learn More <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></article>
+      <article class="card card--link span-3"><div class="tile-icon"><svg class="icon" aria-hidden="true"><use href="#i-file"/></svg></div><h3>On-Page SEO</h3><p>Optimize your website pages around the right keywords and search intent so search engines and visitors understand your content.</p><a href="on-page-seo.html" class="link-more" aria-label="Learn more about On-Page SEO services">Learn More <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></article>
+      <article class="card card--link span-3"><div class="tile-icon"><svg class="icon" aria-hidden="true"><use href="#i-key"/></svg></div><h3>Keyword Research</h3><p>Identify the exact search terms your target customers are using — and build your SEO strategy around the opportunities that matter.</p><a href="seo-services.html#keyword-research" class="link-more" aria-label="Learn more about Keyword Research">Learn More <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></article>
+      <article class="card card--link span-3"><div class="tile-icon"><svg class="icon" aria-hidden="true"><use href="#i-pen"/></svg></div><h3>SEO Content</h3><p>Develop strategic content that attracts qualified organic visitors, answers real customer questions, and supports conversions.</p><a href="seo-content.html" class="link-more" aria-label="Learn more about SEO Content services">Learn More <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></article>
+      <article class="card card--link span-3"><div class="tile-icon"><svg class="icon" aria-hidden="true"><use href="#i-link"/></svg></div><h3>Link Building</h3><p>Build domain authority through a sustainable strategy focused on acquiring relevant, quality backlinks that strengthen your rankings.</p><a href="seo-services.html#link-building" class="link-more" aria-label="Learn more about Link Building services">Learn More <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></article>
+      <article class="card card--link span-3"><div class="tile-icon"><svg class="icon" aria-hidden="true"><use href="#i-map"/></svg></div><h3>Google Business Profile</h3><p>Optimize your Google Business Profile to improve local search presence, attract more calls, and drive foot traffic.</p><a href="local-seo.html#gbp" class="link-more" aria-label="Learn more about Google Business Profile optimization">Learn More <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></article>
+      <article class="card card--link span-3"><div class="tile-icon"><svg class="icon" aria-hidden="true"><use href="#i-chart"/></svg></div><h3>SEO Audits</h3><p>Get a comprehensive analysis of your website's technical health, content quality, keyword positioning, and growth opportunities.</p><a href="seo-audit.html" class="link-more" aria-label="Learn more about SEO Audit services">Learn More <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></article>
     </div>
-
-    <div style="text-align:center;margin-top:3rem;" class="animate-on-scroll">
-      <a href="seo-services.html" class="btn btn--outline-blue btn--lg" id="services-all-btn">View All SEO Services</a>
-    </div>
-
+    <div class="btn-row mt-7"><a href="seo-services.html" class="btn btn--secondary" id="services-all-btn">View All SEO Services</a></div>
   </div>
 </section>
 
-
-<!-- ============================================================
-     HOW IT WORKS
-     ============================================================ -->
-<section class="section section--surface-2" aria-labelledby="process-heading">
-  <div class="container">
-
-    <div class="section-header animate-on-scroll">
-      <div class="section-label">Our Process</div>
-      <h2 id="process-heading" class="section-title">How We Help Your Business Grow in Search</h2>
-      <p class="section-subtitle">A clear, structured approach that moves your business from where you are to where you want to be in Google search results.</p>
+<!-- Process -->
+<section class="section g-main" aria-labelledby="process-heading">
+  <div class="wrap">
+    <div class="head">
+      <div class="label">Our Process</div>
+      <h2 id="process-heading">How We Help Your Business Grow in Search</h2>
+      <p>A clear, structured approach that moves your business from where you are to where you want to be in Google search results.</p>
     </div>
-
-    <div class="process-steps">
-
-      <div class="process-step animate-on-scroll delay-1">
-        <div class="process-step-number" aria-hidden="true">01</div>
-        <div class="process-step-label">Step One</div>
-        <h3 class="process-step-title">Discover</h3>
-        <p class="process-step-desc">We analyze your business, website, target market, competitors, and current search visibility to understand your full picture.</p>
-      </div>
-
-      <div class="process-step animate-on-scroll delay-2">
-        <div class="process-step-number" aria-hidden="true">02</div>
-        <div class="process-step-label">Step Two</div>
-        <h3 class="process-step-title">Strategy</h3>
-        <p class="process-step-desc">We develop a customized SEO strategy based on your business goals, search opportunities, and competitive landscape.</p>
-      </div>
-
-      <div class="process-step animate-on-scroll delay-3">
-        <div class="process-step-number" aria-hidden="true">03</div>
-        <div class="process-step-label">Step Three</div>
-        <h3 class="process-step-title">Optimize</h3>
-        <p class="process-step-desc">We implement technical SEO improvements, content optimizations, local SEO enhancements, and on-page improvements.</p>
-      </div>
-
-      <div class="process-step animate-on-scroll delay-4">
-        <div class="process-step-number" aria-hidden="true">04</div>
-        <div class="process-step-label">Step Four</div>
-        <h3 class="process-step-title">Grow</h3>
-        <p class="process-step-desc">We monitor performance, report transparently on results, and continuously identify new opportunities for organic growth.</p>
-      </div>
-
-    </div>
-
+    <ol class="grid">
+      <li class="step span-3"><span class="step__no" aria-hidden="true">01</span><div class="label">Step One</div><h3>Discover</h3><p>We analyze your business, website, target market, competitors, and current search visibility to understand your full picture.</p></li>
+      <li class="step span-3"><span class="step__no" aria-hidden="true">02</span><div class="label">Step Two</div><h3>Strategy</h3><p>We develop a customized SEO strategy based on your business goals, search opportunities, and competitive landscape.</p></li>
+      <li class="step span-3"><span class="step__no" aria-hidden="true">03</span><div class="label">Step Three</div><h3>Optimize</h3><p>We implement technical SEO improvements, content optimizations, local SEO enhancements, and on-page improvements.</p></li>
+      <li class="step span-3"><span class="step__no" aria-hidden="true">04</span><div class="label">Step Four</div><h3>Grow</h3><p>We monitor performance, report transparently on results, and continuously identify new opportunities for organic growth.</p></li>
+    </ol>
   </div>
 </section>
 
-
-<!-- ============================================================
-     LOCAL SEO SECTION
-     ============================================================ -->
-<section class="section local-seo-section" aria-labelledby="local-seo-heading">
-  <div class="container">
-    <div class="local-seo-grid">
-
-      <!-- Left: Content -->
-      <div class="animate-on-scroll">
-        <div class="section-label">Local SEO · Albuquerque</div>
-        <h2 id="local-seo-heading" class="section-title" style="text-align:left;margin-bottom:1rem;">
-          Helping Albuquerque Businesses Get Found Locally
-        </h2>
-        <div class="divider"></div>
-        <p style="margin-bottom:1.5rem;">
-          When local customers search for businesses like yours in Albuquerque, are you showing up? Local SEO focuses on improving your visibility in location-based searches and Google Maps — connecting you with customers in your area who are ready to take action.
-        </p>
-        <p style="margin-bottom:2rem;">
-          As an SEO company based in Albuquerque, we understand the local market and help businesses across New Mexico compete more effectively in local search results.
-        </p>
-
-        <ul class="check-list" style="margin-bottom:2rem;">
-          <li>Google Maps and Google Business Profile optimization</li>
-          <li>Local keyword targeting for Albuquerque searches</li>
-          <li>NAP consistency across online directories</li>
-          <li>Local citation building and cleanup</li>
-          <li>Locally relevant content development</li>
-          <li>Review strategy and reputation management</li>
+<!-- Local SEO -->
+<section class="section g-alt" aria-labelledby="local-seo-heading">
+  <div class="wrap">
+    <div class="grid split">
+      <div class="span-6">
+        <div class="label">Local SEO · Albuquerque</div>
+        <h2 id="local-seo-heading" class="mt-4">Helping Albuquerque Businesses Get Found Locally</h2>
+        <div class="prose mt-6">
+          <p>When local customers search for businesses like yours in Albuquerque, are you showing up? Local SEO focuses on improving your visibility in location-based searches and Google Maps — connecting you with customers in your area who are ready to take action.</p>
+          <p>As an SEO company based in Albuquerque, we understand the local market and help businesses across New Mexico compete more effectively in local search results.</p>
+        </div>
+        <ul class="ticks mt-6">
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Google Maps and Google Business Profile optimization</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Local keyword targeting for Albuquerque searches</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>NAP consistency across online directories</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Local citation building and cleanup</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Locally relevant content development</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Review strategy and reputation management</li>
         </ul>
-
-        <div style="display:flex;gap:1rem;flex-wrap:wrap;">
-          <a href="local-seo.html" class="btn btn--blue" id="local-seo-learn-btn">Learn About Local SEO</a>
-          <a href="seo-audit.html" class="btn btn--outline-blue" id="local-seo-audit-btn">Get a Free Local SEO Audit</a>
-        </div>
-
-        <!-- NAP Box -->
-        <div class="nap-box" itemscope itemtype="https://schema.org/LocalBusiness">
-          <div class="nap-box-icon" aria-hidden="true">📍</div>
-          <div>
-            <div class="nap-box-title" itemprop="name">Atlas Majesty LLC</div>
-            <address class="nap-box-address" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
-              <span itemprop="streetAddress">1209 Mountain Road, Ste N</span><br>
-              <span itemprop="addressLocality">Albuquerque</span>, <span itemprop="addressRegion">NM</span> <span itemprop="postalCode">87110</span>
-            </address>
-          </div>
+        <div class="btn-row mt-7">
+          <a href="local-seo.html" class="btn btn--secondary" id="local-seo-learn-btn">Learn About Local SEO</a>
+          <a href="seo-audit.html" class="btn btn--primary" id="local-seo-audit-btn">Get a Free Local SEO Audit</a>
         </div>
       </div>
-
-      <!-- Right: Visual -->
-      <div class="animate-on-scroll delay-2">
-        <img
-          src="images/local-seo-visual-brand.jpg"
-          alt="Local SEO visualization showing Google Maps with Albuquerque business listings and search results"
-          width="640"
-          height="480"
-          loading="lazy"
-          style="border-radius:1.5rem;box-shadow:0 20px 60px rgba(var(--brand-darkest-rgb),0.15);"
-        >
+      <div class="span-6 start-7">
+        <div class="nap" itemscope itemtype="https://schema.org/LocalBusiness">
+          <div class="tile-icon"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg></div>
+          <div class="nap__name" itemprop="name">Atlas Majesty LLC</div>
+          <address itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+            <span itemprop="streetAddress">1209 Mountain Road, Ste N</span><br>
+            <span itemprop="addressLocality">Albuquerque</span>, <span itemprop="addressRegion">NM</span> <span itemprop="postalCode">87110</span>
+          </address>
+        </div>
       </div>
-
     </div>
   </div>
 </section>
 
-
-<!-- ============================================================
-     WHY CHOOSE US
-     ============================================================ -->
-<section class="section section--blue-pale" aria-labelledby="why-heading">
-  <div class="container">
-
-    <div class="section-header animate-on-scroll">
-      <div class="section-label">Why Atlas Majesty</div>
-      <h2 id="why-heading" class="section-title">An SEO Partner Focused on Your Business Outcomes</h2>
-      <p class="section-subtitle">We don't apply cookie-cutter strategies. We build customized SEO approaches designed around your specific business goals and market.</p>
+<!-- Why Atlas Majesty -->
+<section class="section g-main" aria-labelledby="why-heading">
+  <div class="wrap">
+    <div class="head">
+      <div class="label">Why Atlas Majesty</div>
+      <h2 id="why-heading">An SEO Partner Focused on Your Business Outcomes</h2>
+      <p>We don't apply cookie-cutter strategies. We build customized SEO approaches designed around your specific business goals and market.</p>
     </div>
-
-    <div class="why-grid">
-      <div class="why-feature animate-on-scroll delay-1">
-        <div class="feature-icon" aria-hidden="true">🎯</div>
-        <div>
-          <h3 class="feature-title">Customized SEO Strategies</h3>
-          <p class="feature-desc">Every business is different. We develop SEO strategies tailored to your specific industry, market, audience, and goals — not a generic template.</p>
-        </div>
-      </div>
-      <div class="why-feature animate-on-scroll delay-2">
-        <div class="feature-icon" aria-hidden="true">📊</div>
-        <div>
-          <h3 class="feature-title">Data-Driven Decision Making</h3>
-          <p class="feature-desc">Every recommendation is backed by research and data — keyword analysis, competitor insights, technical audits, and search performance metrics.</p>
-        </div>
-      </div>
-      <div class="why-feature animate-on-scroll delay-3">
-        <div class="feature-icon" aria-hidden="true">🔍</div>
-        <div>
-          <h3 class="feature-title">Full-Spectrum SEO Approach</h3>
-          <p class="feature-desc">We address technical SEO, on-page optimization, content strategy, local SEO, and link building as an integrated whole — not in isolation.</p>
-        </div>
-      </div>
-      <div class="why-feature animate-on-scroll delay-4">
-        <div class="feature-icon" aria-hidden="true">💬</div>
-        <div>
-          <h3 class="feature-title">Transparent Communication</h3>
-          <p class="feature-desc">You'll always know what we're doing and why. We provide clear reporting on performance, explain our strategy, and keep you informed.</p>
-        </div>
-      </div>
-      <div class="why-feature animate-on-scroll delay-1">
-        <div class="feature-icon" aria-hidden="true">📈</div>
-        <div>
-          <h3 class="feature-title">Focus on Measurable Outcomes</h3>
-          <p class="feature-desc">We track the metrics that matter to your business — organic traffic, keyword rankings, lead generation, and visibility growth.</p>
-        </div>
-      </div>
-      <div class="why-feature animate-on-scroll delay-2">
-        <div class="feature-icon" aria-hidden="true">🌱</div>
-        <div>
-          <h3 class="feature-title">Long-Term Organic Growth</h3>
-          <p class="feature-desc">SEO done right builds lasting visibility. We focus on sustainable strategies that grow your organic presence over the long term.</p>
-        </div>
-      </div>
+    <div class="grid">
+      <div class="tile span-4"><svg class="icon" aria-hidden="true" style="width:28px;height:28px;color:var(--brand-primary)"><use href="#i-target"/></svg><h3>Customized SEO Strategies</h3><p>Every business is different. We develop SEO strategies tailored to your specific industry, market, audience, and goals — not a generic template.</p></div>
+      <div class="tile span-4"><svg class="icon" aria-hidden="true" style="width:28px;height:28px;color:var(--brand-primary)"><use href="#i-chart"/></svg><h3>Data-Driven Decision Making</h3><p>Every recommendation is backed by research and data — keyword analysis, competitor insights, technical audits, and search performance metrics.</p></div>
+      <div class="tile span-4"><svg class="icon" aria-hidden="true" style="width:28px;height:28px;color:var(--brand-primary)"><use href="#i-search"/></svg><h3>Full-Spectrum SEO Approach</h3><p>We address technical SEO, on-page optimization, content strategy, local SEO, and link building as an integrated whole — not in isolation.</p></div>
+      <div class="tile span-4"><svg class="icon" aria-hidden="true" style="width:28px;height:28px;color:var(--brand-primary)"><use href="#i-chat"/></svg><h3>Transparent Communication</h3><p>You'll always know what we're doing and why. We provide clear reporting on performance, explain our strategy, and keep you informed.</p></div>
+      <div class="tile span-4"><svg class="icon" aria-hidden="true" style="width:28px;height:28px;color:var(--brand-primary)"><use href="#i-up"/></svg><h3>Focus on Measurable Outcomes</h3><p>We track the metrics that matter to your business — organic traffic, keyword rankings, lead generation, and visibility growth.</p></div>
+      <div class="tile span-4"><svg class="icon" aria-hidden="true" style="width:28px;height:28px;color:var(--brand-primary)"><use href="#i-sprout"/></svg><h3>Long-Term Organic Growth</h3><p>SEO done right builds lasting visibility. We focus on sustainable strategies that grow your organic presence over the long term.</p></div>
     </div>
-
   </div>
 </section>
 
-
-<!-- ============================================================
-     SEO AUDIT LEAD-GEN SECTION
-     ============================================================ -->
-<section class="audit-section section" id="seo-audit-form" aria-labelledby="audit-heading">
-  <div class="container">
-    <div class="audit-grid">
-
-      <!-- Left: Copy -->
-      <div class="animate-on-scroll">
-        <div class="section-label section-label--amber">Free SEO Audit</div>
-        <h2 id="audit-heading" class="section-title section-title--white" style="text-align:left;margin-bottom:1rem;">
-          Find Out What's Holding Your Website Back
-        </h2>
-        <div class="divider"></div>
-        <p style="color:rgba(255,255,255,0.7);margin-bottom:2rem;line-height:1.75;">
-          A comprehensive SEO audit reveals exactly what's preventing your website from ranking higher in Google. We analyze your website across every important dimension of SEO.
-        </p>
-
-        <div class="audit-points" role="list" aria-label="What the SEO audit covers">
-          <div class="audit-point" role="listitem">Technical SEO issues affecting crawlability and indexing</div>
-          <div class="audit-point" role="listitem">Missing or poorly optimized metadata and page titles</div>
-          <div class="audit-point" role="listitem">Keyword targeting opportunities you may be missing</div>
-          <div class="audit-point" role="listitem">Content gaps compared to ranking competitors</div>
-          <div class="audit-point" role="listitem">Local SEO and Google Business Profile opportunities</div>
-          <div class="audit-point" role="listitem">Website performance and Core Web Vitals analysis</div>
-          <div class="audit-point" role="listitem">Internal linking structure improvements</div>
-          <div class="audit-point" role="listitem">Competitor visibility and backlink analysis</div>
-        </div>
+<!-- Free audit -->
+<section class="section g-alt" id="seo-audit-form" aria-labelledby="audit-heading" data-bar-hide>
+  <div class="wrap">
+    <div class="grid split">
+      <div class="span-5">
+        <div class="label">Free SEO Audit</div>
+        <h2 id="audit-heading" class="mt-4">Find Out What's Holding Your Website Back</h2>
+        <p class="prose mt-6">A comprehensive SEO audit reveals exactly what's preventing your website from ranking higher in Google. We analyze your website across every important dimension of SEO.</p>
+        <ul class="ticks mt-6" aria-label="What the SEO audit covers">
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Technical SEO issues affecting crawlability and indexing</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Missing or poorly optimized metadata and page titles</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Keyword targeting opportunities you may be missing</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Content gaps compared to ranking competitors</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Local SEO and Google Business Profile opportunities</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Website performance and Core Web Vitals analysis</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Internal linking structure improvements</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Competitor visibility and backlink analysis</li>
+        </ul>
       </div>
-
-      <!-- Right: Form -->
-      <div class="animate-on-scroll delay-2">
-        <div class="audit-form-card">
-          <h3 class="audit-form-title" id="audit-form-heading">Request Your Free SEO Audit</h3>
-          <p class="audit-form-sub">Fill out the form and we'll be in touch to discuss your website and SEO goals.</p>
-
-          <form data-form="audit" class="audit-form-fields" aria-labelledby="audit-form-heading" novalidate>
-
-            <div class="form-grid-2">
-              <div class="form-group">
-                <label class="form-label" for="audit-name">Your Name <span aria-hidden="true">*</span></label>
-                <input class="form-input" type="text" id="audit-name" name="name" placeholder="Jane Smith" required data-validate="required" autocomplete="name">
-                <span class="form-error" aria-live="polite"></span>
-              </div>
-              <div class="form-group">
-                <label class="form-label" for="audit-business">Business Name <span aria-hidden="true">*</span></label>
-                <input class="form-input" type="text" id="audit-business" name="business" placeholder="Your Business LLC" required data-validate="required" autocomplete="organization">
-                <span class="form-error" aria-live="polite"></span>
-              </div>
+      <div class="span-6 start-7">
+        <div class="form-card">
+          <h3 id="audit-form-heading" style="font-size:1.5rem">Request Your Free SEO Audit</h3>
+          <p>Fill out the form and we'll be in touch to discuss your website and SEO goals.</p>
+          <form class="form" data-form="audit" action="send.php" method="post" aria-labelledby="audit-form-heading" novalidate>
+            <div class="form__row form__row--2">
+              <div class="field"><label for="audit-name">Your Name <span aria-hidden="true">*</span></label><input type="text" id="audit-name" name="name" placeholder="Jane Smith" required data-validate="required" autocomplete="name" aria-describedby="audit-name-err"><span class="field__error" id="audit-name-err"></span></div>
+              <div class="field"><label for="audit-business">Business Name <span aria-hidden="true">*</span></label><input type="text" id="audit-business" name="business" placeholder="Your Business LLC" required data-validate="required" autocomplete="organization" aria-describedby="audit-business-err"><span class="field__error" id="audit-business-err"></span></div>
             </div>
-
-            <div class="form-group">
-              <label class="form-label" for="audit-website">Website URL <span aria-hidden="true">*</span></label>
-              <input class="form-input" type="url" id="audit-website" name="website" placeholder="https://yourbusiness.com" required data-validate="url" autocomplete="url">
-              <span class="form-error" aria-live="polite"></span>
+            <div class="field"><label for="audit-website">Website URL <span aria-hidden="true">*</span></label><input type="url" id="audit-website" name="website" placeholder="https://yourbusiness.com" required data-validate="url" autocomplete="url" aria-describedby="audit-website-err"><span class="field__error" id="audit-website-err"></span></div>
+            <div class="form__row form__row--2">
+              <div class="field"><label for="audit-email">Email Address <span aria-hidden="true">*</span></label><input type="email" id="audit-email" name="email" placeholder="jane@yourbusiness.com" required data-validate="email" autocomplete="email" aria-describedby="audit-email-err"><span class="field__error" id="audit-email-err"></span></div>
+              <div class="field"><label for="audit-phone">Phone <span class="opt">(optional)</span></label><input type="tel" id="audit-phone" name="phone" placeholder="(505) 555-0000" data-validate="phone" autocomplete="tel" aria-describedby="audit-phone-err"><span class="field__error" id="audit-phone-err"></span></div>
             </div>
-
-            <div class="form-grid-2">
-              <div class="form-group">
-                <label class="form-label" for="audit-email">Email Address <span aria-hidden="true">*</span></label>
-                <input class="form-input" type="email" id="audit-email" name="email" placeholder="jane@yourbusiness.com" required data-validate="email" autocomplete="email">
-                <span class="form-error" aria-live="polite"></span>
-              </div>
-              <div class="form-group">
-                <label class="form-label" for="audit-phone">Phone <span class="optional">(optional)</span></label>
-                <input class="form-input" type="tel" id="audit-phone" name="phone" placeholder="(505) 555-0000" data-validate="phone" autocomplete="tel">
-                <span class="form-error" aria-live="polite"></span>
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label class="form-label" for="audit-challenge">Main SEO Challenge</label>
-              <select class="form-select" id="audit-challenge" name="challenge">
+            <div class="field"><label for="audit-challenge">Main SEO Challenge</label>
+              <select id="audit-challenge" name="challenge">
                 <option value="">Select your main challenge…</option>
                 <option value="low-rankings">My website doesn't rank on Google</option>
                 <option value="no-traffic">Very little organic traffic</option>
@@ -822,248 +458,101 @@
                 <option value="other">Other / Not sure</option>
               </select>
             </div>
-
-            <div class="form-group">
-              <label class="form-label" for="audit-message">Additional Details <span class="optional">(optional)</span></label>
-              <textarea class="form-textarea" id="audit-message" name="message" placeholder="Tell us more about your business and SEO goals…" rows="3"></textarea>
-            </div>
-
-            <button type="submit" class="btn btn--blue btn--full btn--lg" id="audit-submit-btn">
-              Request My Free SEO Audit <span class="arrow" aria-hidden="true">→</span>
-            </button>
-
-            <p style="font-size:0.75rem;color:var(--color-text-muted);text-align:center;margin-top:0.75rem;">No obligation. No spam. We'll review your site and reach out to discuss next steps.</p>
-
-            <!-- Success message (hidden until submission) -->
-            <div class="form-success-message" style="display:none;" role="alert">
-              <div style="text-align:center;padding:2rem;">
-                <div style="font-size:3rem;margin-bottom:1rem;">✅</div>
-                <h4 style="color:var(--brand-darkest);font-size:1.25rem;margin-bottom:0.5rem;">Audit Request Received!</h4>
-                <p style="color:var(--color-text-muted);">Thank you for reaching out. We'll review your website and be in touch shortly.</p>
-              </div>
-            </div>
-
+            <div class="field"><label for="audit-message">Additional Details <span class="opt">(optional)</span></label><textarea id="audit-message" name="message" placeholder="Tell us more about your business and SEO goals…" rows="3"></textarea></div>
+            <div class="hp" aria-hidden="true"><label for="audit-hp">Leave this field empty</label><input type="text" id="audit-hp" name="company_url" tabindex="-1" autocomplete="off"></div>
+            <button type="submit" class="btn btn--primary" id="audit-submit-btn">Request My Free SEO Audit <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+            <p class="form__status" role="status" data-form-status data-sent="Audit Request Received! Thank you for reaching out. We'll review your website and be in touch shortly."></p>
+            <p class="form__status">No obligation. No spam. We'll review your site and reach out to discuss next steps.</p>
           </form>
         </div>
       </div>
-
     </div>
   </div>
 </section>
 
-
-<!-- ============================================================
-     FAQ SECTION
-     ============================================================ -->
-<section class="section" aria-labelledby="faq-heading">
-  <div class="container">
-
-    <div class="section-header animate-on-scroll">
-      <div class="section-label">Common Questions</div>
-      <h2 id="faq-heading" class="section-title">Frequently Asked Questions About SEO</h2>
-      <p class="section-subtitle">Clear answers to common questions about SEO, how it works, and what to expect from an SEO strategy.</p>
-    </div>
-
-    <div class="faq-list animate-on-scroll">
-
-      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-        <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
-          <span class="faq-question-text" itemprop="name">What is SEO and why does my business need it?</span>
-          <span class="faq-icon" aria-hidden="true">+</span>
-        </div>
-        <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-          <div class="faq-answer-inner" itemprop="text">
-            SEO (Search Engine Optimization) is the process of improving your website so it ranks higher in search engine results pages like Google. When potential customers search for products or services you offer, SEO helps ensure your business appears in front of them. For most businesses, organic search is one of the most cost-effective long-term sources of qualified traffic and leads.
-          </div>
+<!-- FAQ -->
+<section class="section g-main" aria-labelledby="faq-heading">
+  <div class="wrap">
+    <div class="grid split">
+      <div class="span-5">
+        <div class="head" style="margin-bottom:0">
+          <div class="label">Common Questions</div>
+          <h2 id="faq-heading">Frequently Asked Questions About SEO</h2>
+          <p>Clear answers to common questions about SEO, how it works, and what to expect from an SEO strategy.</p>
         </div>
       </div>
-
-      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-        <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
-          <span class="faq-question-text" itemprop="name">How long does SEO take to show results?</span>
-          <span class="faq-icon" aria-hidden="true">+</span>
-        </div>
-        <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-          <div class="faq-answer-inner" itemprop="text">
-            SEO is a long-term strategy. Most businesses begin to see meaningful improvements within 3 to 6 months, though the timeline varies based on factors such as your industry, the competitiveness of your keywords, your current website condition, domain authority, and the scope of the SEO work being done. Sustainable organic growth compounds over time and typically becomes one of your most reliable sources of traffic.
-          </div>
-        </div>
-      </div>
-
-      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-        <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
-          <span class="faq-question-text" itemprop="name">How much do SEO services cost?</span>
-          <span class="faq-icon" aria-hidden="true">+</span>
-        </div>
-        <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-          <div class="faq-answer-inner" itemprop="text">
-            SEO pricing depends on several factors, including your current website condition, the competitiveness of your industry, the scope of services required, and your business goals. We don't believe in one-size-fits-all pricing — we prefer to first understand your situation and then provide a customized proposal. <a href="contact.html">Contact us</a> or <a href="seo-audit.html">request a free SEO audit</a> to start the conversation.
-          </div>
-        </div>
-      </div>
-
-      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-        <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
-          <span class="faq-question-text" itemprop="name">Can you help my local business rank on Google in Albuquerque?</span>
-          <span class="faq-icon" aria-hidden="true">+</span>
-        </div>
-        <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-          <div class="faq-answer-inner" itemprop="text">
-            Yes. Local SEO is one of our core specialties. We help local businesses in Albuquerque and across New Mexico improve their visibility in location-based Google searches and Google Maps results. This includes optimizing your Google Business Profile, building local citations, developing locally relevant content, and strengthening your overall local search presence.
-          </div>
-        </div>
-      </div>
-
-      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-        <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
-          <span class="faq-question-text" itemprop="name">What is a Google Business Profile and why does it matter?</span>
-          <span class="faq-icon" aria-hidden="true">+</span>
-        </div>
-        <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-          <div class="faq-answer-inner" itemprop="text">
-            A Google Business Profile (formerly Google My Business) is a free listing that allows your business to appear in Google Maps and local search results. An optimized profile helps your business appear in the Google Maps Pack — the group of local business listings that appear prominently at the top of local search results. It's especially important for businesses that serve customers in a specific geographic area.
-          </div>
-        </div>
-      </div>
-
-      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-        <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
-          <span class="faq-question-text" itemprop="name">Why isn't my website ranking on Google?</span>
-          <span class="faq-icon" aria-hidden="true">+</span>
-        </div>
-        <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-          <div class="faq-answer-inner" itemprop="text">
-            There are many reasons a website may not rank well in Google, including technical SEO issues (crawlability, indexing, site speed), insufficient or poorly optimized content, lack of relevant backlinks, weak keyword targeting, competition from more authoritative websites, or a relatively new domain. An SEO audit can identify the specific factors holding your website back and prioritize the most impactful improvements.
-          </div>
-        </div>
-      </div>
-
-      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-        <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
-          <span class="faq-question-text" itemprop="name">What does an SEO audit include?</span>
-          <span class="faq-icon" aria-hidden="true">+</span>
-        </div>
-        <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-          <div class="faq-answer-inner" itemprop="text">
-            Our SEO audit covers your website's technical health (crawlability, indexing, site speed, Core Web Vitals), on-page optimization (metadata, headings, keyword targeting), content quality and gaps, local SEO presence, backlink profile, and competitive positioning. The goal is to identify exactly what's limiting your search visibility and what improvements will have the greatest impact. <a href="seo-audit.html">Request your free SEO audit</a> to get started.
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-  </div>
-</section>
-
-
-<!-- ============================================================
-     FINAL CTA SECTION
-     ============================================================ -->
-<section class="section section--dark" aria-labelledby="final-cta-heading">
-  <div class="container" style="text-align:center;">
-    <div class="animate-on-scroll">
-      <div class="section-label section-label--amber" style="display:inline-flex;">Ready to Grow?</div>
-      <h2 id="final-cta-heading" class="section-title section-title--white" style="margin-top:1rem;max-width:700px;margin-left:auto;margin-right:auto;">
-        Start Growing Your Organic Search Visibility Today
-      </h2>
-      <p class="section-subtitle section-subtitle--white" style="margin-bottom:2.5rem;">
-        Whether you're starting from scratch or looking to improve your current SEO results, we're here to help. Let's start with a free review of your website.
-      </p>
-      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
-        <a href="seo-audit.html" class="btn btn--primary btn--xl" id="final-cta-primary">Get Your Free SEO Audit <span class="arrow">→</span></a>
-        <a href="contact.html" class="btn btn--ghost btn--xl" id="final-cta-secondary">Request a Consultation</a>
+      <div class="span-6 start-7 faq">
+        <div class="faq__row"><h3>What is SEO and why does my business need it?</h3><p>SEO (Search Engine Optimization) is the process of improving your website so it ranks higher in search engine results pages like Google. When potential customers search for products or services you offer, SEO helps ensure your business appears in front of them. For most businesses, organic search is one of the most cost-effective long-term sources of qualified traffic and leads.</p></div>
+        <div class="faq__row"><h3>How long does SEO take to show results?</h3><p>SEO is a long-term strategy. Most businesses begin to see meaningful improvements within 3 to 6 months, though the timeline varies based on factors such as your industry, the competitiveness of your keywords, your current website condition, domain authority, and the scope of the SEO work being done. Sustainable organic growth compounds over time and typically becomes one of your most reliable sources of traffic.</p></div>
+        <div class="faq__row"><h3>How much do SEO services cost?</h3><p>SEO pricing depends on several factors, including your current website condition, the competitiveness of your industry, the scope of services required, and your business goals. We don't believe in one-size-fits-all pricing — we prefer to first understand your situation and then provide a customized proposal. <a href="contact.html">Contact us</a> or <a href="seo-audit.html">request a free SEO audit</a> to start the conversation.</p></div>
+        <div class="faq__row"><h3>Can you help my local business rank on Google in Albuquerque?</h3><p>Yes. Local SEO is one of our core specialties. We help local businesses in Albuquerque and across New Mexico improve their visibility in location-based Google searches and Google Maps results. This includes optimizing your Google Business Profile, building local citations, developing locally relevant content, and strengthening your overall local search presence.</p></div>
+        <div class="faq__row"><h3>What is a Google Business Profile and why does it matter?</h3><p>A Google Business Profile (formerly Google My Business) is a free listing that allows your business to appear in Google Maps and local search results. An optimized profile helps your business appear in the Google Maps Pack — the group of local business listings that appear prominently at the top of local search results. It's especially important for businesses that serve customers in a specific geographic area.</p></div>
+        <div class="faq__row"><h3>Why isn't my website ranking on Google?</h3><p>There are many reasons a website may not rank well in Google, including technical SEO issues (crawlability, indexing, site speed), insufficient or poorly optimized content, lack of relevant backlinks, weak keyword targeting, competition from more authoritative websites, or a relatively new domain. An SEO audit can identify the specific factors holding your website back and prioritize the most impactful improvements.</p></div>
+        <div class="faq__row"><h3>What does an SEO audit include?</h3><p>Our SEO audit covers your website's technical health (crawlability, indexing, site speed, Core Web Vitals), on-page optimization (metadata, headings, keyword targeting), content quality and gaps, local SEO presence, backlink profile, and competitive positioning. The goal is to identify exactly what's limiting your search visibility and what improvements will have the greatest impact. <a href="seo-audit.html">Request your free SEO audit</a> to get started.</p></div>
       </div>
     </div>
   </div>
 </section>
 
+</main>
 
-<!-- ============================================================
-     FOOTER
-     ============================================================ -->
-<footer class="site-footer" role="contentinfo">
-  <div class="container">
-    <div class="footer-grid">
-
-      <!-- Brand Column -->
-      <div class="footer-brand">
-        <a href="/" class="nav-logo" style="margin-bottom:1.25rem;display:inline-flex;" aria-label="Atlas Majesty LLC — Home">
-          <div class="nav-logo-icon"><img src="/images/brand/logo-mark-white.png" srcset="/images/brand/logo-mark-white.png 1x, /images/brand/logo-mark-white@2x.png 2x" width="44" height="24" alt=""></div>
-          <div class="nav-logo-text">
-            <span class="nav-logo-name">Atlas Majesty</span>
-            <span class="nav-logo-tagline">SEO &amp; Digital Marketing</span>
-          </div>
-        </a>
+<!-- Closing: the final call to action and the directory are one section -->
+<footer class="closing on-dark" id="close">
+  <div class="wrap">
+    <div class="close" data-bar-hide>
+      <div class="label">Ready to Grow?</div>
+      <h2 id="final-cta-heading" class="mt-4">Start Growing Your Organic Search Visibility Today</h2>
+      <p>Whether you're starting from scratch or looking to improve your current SEO results, we're here to help. Let's start with a free review of your website.</p>
+      <div class="btn-row">
+        <a href="seo-audit.html" class="btn btn--primary" id="final-cta-primary">Get Your Free SEO Audit <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a href="contact.html" class="btn btn--secondary" id="final-cta-secondary">Request a Consultation</a>
+      </div>
+    </div>
+    <div class="grid directory">
+      <div class="span-5">
+        <a class="brand" href="/" aria-label="Atlas Majesty LLC — Home"><img src="/images/brand/logo-mark-white.png" srcset="/images/brand/logo-mark-white.png 1x, /images/brand/logo-mark-white@2x.png 2x" width="44" height="24" alt="" loading="lazy"><span>Atlas Majesty</span></a>
         <p>Helping businesses in Albuquerque and beyond improve their online visibility, attract qualified organic traffic, and generate more leads through strategic SEO.</p>
-        <address class="footer-address" itemscope itemtype="https://schema.org/PostalAddress">
+        <address itemscope itemtype="https://schema.org/PostalAddress">
           <strong itemprop="name">Atlas Majesty LLC</strong><br>
           <span itemprop="streetAddress">1209 Mountain Road, Ste N</span><br>
           <span itemprop="addressLocality">Albuquerque</span>, <span itemprop="addressRegion">NM</span> <span itemprop="postalCode">87110</span>
         </address>
         <!-- TODO: phone (footer) -->
-        <p class="footer-email">
-          <a href="mailto:support@atlasmajesty.com" itemprop="email">support@atlasmajesty.com</a>
-        </p>
-        <!-- Social links: add real URLs when available -->
-        <div class="footer-social" aria-label="Social media links">
-          <!-- <a href="#" class="footer-social-link" aria-label="Follow us on Facebook">f</a> -->
-          <!-- <a href="#" class="footer-social-link" aria-label="Follow us on LinkedIn">in</a> -->
-          <!-- <a href="#" class="footer-social-link" aria-label="Follow us on Twitter/X">𝕏</a> -->
-        </div>
+        <a class="mail link" href="mailto:support@atlasmajesty.com" itemprop="email">support@atlasmajesty.com</a>
       </div>
-
-      <!-- Services Column -->
-      <nav aria-label="SEO Services navigation">
-        <div class="footer-nav-title">SEO Services</div>
-        <a href="seo-services.html" class="footer-nav-link">All SEO Services</a>
-        <a href="local-seo.html" class="footer-nav-link">Local SEO</a>
-        <a href="technical-seo.html" class="footer-nav-link">Technical SEO</a>
-        <a href="on-page-seo.html" class="footer-nav-link">On-Page SEO</a>
-        <a href="seo-content.html" class="footer-nav-link">SEO Content</a>
-        <a href="seo-audit.html" class="footer-nav-link">SEO Audit</a>
+      <nav class="span-2 start-7" aria-label="SEO Services navigation">
+        <h3>SEO Services</h3>
+        <a href="seo-services.html">All SEO Services</a>
+        <a href="local-seo.html">Local SEO</a>
+        <a href="technical-seo.html">Technical SEO</a>
+        <a href="on-page-seo.html">On-Page SEO</a>
+        <a href="seo-content.html">SEO Content</a>
+        <a href="seo-audit.html">SEO Audit</a>
       </nav>
-
-      <!-- Company Column -->
-      <nav aria-label="Company navigation">
-        <div class="footer-nav-title">Company</div>
-        <a href="about.html" class="footer-nav-link">About Us</a>
-        <a href="blog/index.html" class="footer-nav-link">Blog &amp; SEO Resources</a>
-        <a href="contact.html" class="footer-nav-link">Contact</a>
-        <a href="seo-audit.html" class="footer-nav-link">Free SEO Audit</a>
+      <nav class="span-2" aria-label="Company navigation">
+        <h3>Company</h3>
+        <a href="about.html">About Us</a>
+        <a href="blog/index.html">Blog &amp; SEO Resources</a>
+        <a href="contact.html">Contact</a>
+        <a href="seo-audit.html">Free SEO Audit</a>
       </nav>
-
-      <!-- Legal Column -->
-      <nav aria-label="Legal navigation">
-        <div class="footer-nav-title">Legal</div>
-        <a href="privacy-policy.html" class="footer-nav-link">Privacy Policy</a>
-        <a href="terms-of-service.html" class="footer-nav-link">Terms of Service</a>
-        <a href="cookie-policy.html" class="footer-nav-link">Cookie Policy</a>
-      </nav>
-
-    </div>
-
-    <!-- Footer Bottom -->
-    <div class="footer-bottom">
-      <p class="footer-copyright">
-        &copy; <span id="copyright-year">2026</span> Atlas Majesty LLC. All rights reserved. · Albuquerque, NM 87110
-      </p>
-      <div class="footer-legal">
+      <nav class="span-2" aria-label="Legal navigation">
+        <h3>Legal</h3>
         <a href="privacy-policy.html">Privacy Policy</a>
         <a href="terms-of-service.html">Terms of Service</a>
-        <a href="sitemap.xml">Sitemap</a>
-      </div>
+        <a href="cookie-policy.html">Cookie Policy</a>
+      </nav>
     </div>
-
+    <div class="legal closing__legal">
+      <p>&copy; 2026 Atlas Majesty LLC. All rights reserved. · Albuquerque, NM 87110</p>
+      <div><a href="privacy-policy.html">Privacy Policy</a><a href="terms-of-service.html">Terms of Service</a><a href="sitemap.xml">Sitemap</a></div>
+    </div>
   </div>
 </footer>
 
-<!-- Back to Top -->
-<button id="back-to-top" aria-label="Back to top">↑</button>
+<div class="actionbar on-dark" data-actionbar><a class="btn btn--primary" href="seo-audit.html">Get Your Free SEO Audit</a></div>
 
-<!-- Scripts -->
-<script src="js/main.js" defer></script>
-<script src="js/interactions.js" defer></script>
+<script src="js/site.js" defer></script>
 <script src="js/forms.js" defer></script>
-
 </body>
 </html>

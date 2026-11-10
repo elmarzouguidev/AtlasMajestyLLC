@@ -22,7 +22,7 @@ Static marketing site (HTML, CSS, vanilla JS) for **Atlas Majesty LLC**, an SEO 
 - Logo source: `images/brand/atlas-majesty-logo.jpeg` (never modify or delete). Generated variants live in `images/brand/`.
 - Use the white logo on dark backgrounds and the burgundy logo on light ones.
 
-## Colors (defined in `:root` in `css/main.css`)
+## Colors (defined in `:root` in `css/site.css`)
 | Token | Value | Use |
 |---|---|---|
 | `--brand-primary` | #800020 | buttons, links, accents |
@@ -38,11 +38,12 @@ Static marketing site (HTML, CSS, vanilla JS) for **Atlas Majesty LLC**, an SEO 
 - Never put `--brand-accent` text on dark backgrounds (it fails contrast at about 2:1).
 - Text and background pairs must meet WCAG AA (4.5:1 normal text, 3:1 large text/UI).
 - No blue, navy or amber from the old theme.
-- Error states keep #EF4444 and must include an icon or text, not color alone.
+- Error states: `--color-error` #EF4444 is for borders only. Small error *text* uses `--color-error-text` #DC2626 (4.8:1 on white; #EF4444 is only 3.76:1). Every error state also carries text, never color alone.
+- Muted text is `--color-text-muted` #596678 (5.1:1 on `--brand-surface-2`). Never use #94A3B8 or lighter for text people read.
 
 ## Structure
 - Root pages: index, about, contact, seo-services, local-seo, technical-seo, on-page-seo, seo-content, seo-audit, privacy-policy, terms-of-service, cookie-policy
-- `blog/` holds the blog index and posts. `css/main.css` is the main stylesheet. `js/main.js` holds the scripts. `images/` holds the images.
+- `blog/` holds the blog index and posts. `css/site.css` is the one stylesheet (layers: tokens, base, layout, components, utilities). `js/site.js` holds the site scripts and `js/forms.js` the forms. `send.php` receives the forms. `images/` holds the images.
 - Header, mobile menu and footer are duplicated in every HTML file. A change to one must be applied to all pages.
 
 ## SEO conventions
@@ -56,7 +57,7 @@ Static marketing site (HTML, CSS, vanilla JS) for **Atlas Majesty LLC**, an SEO 
 - JSON-LD: LocalBusiness/ProfessionalService and FAQPage on the homepage. Keep name, address, email and URL identical to the Brand section (NAP consistency).
 - When adding, removing or renaming a page, update `sitemap.xml` (lastmod = today) and internal links.
 - Legal pages: list any changed sentence in the report for manual review.
-- 
+
 ## Design skills
 For any UI, layout, styling or redesign work, first read both skills in full and follow them:
 - `design-taste-frontend`
@@ -74,3 +75,18 @@ Redesign constraints:
 - Performance: no layout shift, lazy-load below-the-fold images, keep CSS/JS lean (Core Web Vitals matter for an SEO agency's own site).
 - Accessibility: WCAG AA contrast, visible focus states, keyboard-usable menus and FAQ, prefers-reduced-motion respected.
 - Header, mobile menu and footer are duplicated in every page: change them identically everywhere.
+
+## Redesign decisions (approved)
+- **Direction:** Outfit (headings) + Figtree (text), only weights 400 and 500, loaded from Google Fonts with `display=swap`, preconnect and a non-blocking stylesheet. Metric-matched `Outfit Fallback` / `Figtree Fallback` faces prevent layout shift. `--display-weight` (400 by default) controls heading weight.
+- **System:** spacing 4/8/12/16/24/32/48/64/96/128 (`--s-1…10`), type tokens `--t-*`, radius `soft` 8/12/20, one 1280px `.wrap`, 12-column grid, split line at column 7. Cards use a layered shadow ring over a transparent border; nothing nests a box in a box.
+- **Rhythm:** hero (dark) → alternating `--brand-surface` / `--brand-surface-2` sections → one dark `footer.closing` that also holds the final call to action. Two dark bands only. Sections use `min-height: calc(var(--h,1) * 100svh)`, never a fixed height, so content never clips. Index and service pages follow this; blog and legal pages use a looser flow.
+- **Hero:** type-led statement. No stock people, no invented dashboards or metrics. No stock photos of any kind unless the owner supplies real ones.
+- **Header/nav:** opaque, fixed, hairline, no blur or shadow. Bar items: SEO Services (flat panel), Local SEO, About, Blog, Contact, plus the one primary button. "Home" and "Free Audit" are not in the bar (the logo and the button cover them); the footer keeps both links. Phones get a full-screen menu and a bottom action bar.
+- **FAQ:** open in full (ruled rows, no accordion), matching the FAQPage JSON-LD.
+- **Motion:** hero entrance once on load; one type-led moment per page (words settle from soft to full on scroll). Transform/opacity only, gated by `prefers-reduced-motion`. No scroll fade-ins. Hover styles only inside `@media (hover: hover)`. Press: 1px sink and scale .985; hover lifts 1px; linked cards lift 2px.
+- **Forms:** no mailto and no fake success. `js/forms.js` posts with `fetch()` to `send.php` and shows "sent" only on a successful JSON response; errors appear under their fields or in the status line. `send.php`: POST only, server-side validation, honeypot field `company_url`, per-IP rate limit, same-origin check, email to support@atlasmajesty.com via `mail()` (switch to SMTP later in `send_mail()`). Field names and order never change.
+- **Images:** the blog and local-SEO JPGs with text baked into the pixels were removed from the design; none may be reintroduced. Pictures are live-text-free, have width/height, lazy-load below the fold, and content images get a 1px black 10% inset outline.
+- **Icons:** one outline SVG sprite, `currentColor`, 1.5px rendered stroke. No emoji.
+- **Budget per page:** CSS under 60 KB, JS under 30 KB, no layout shift from fonts, images or the header, only the fonts and weights in use.
+- **Class naming:** neutral or brand names only (`btn--primary`, `card`, `tile`, `step`, `g-main`, `g-alt`). No `blue`, `navy` or `amber` in any class or selector.
+
