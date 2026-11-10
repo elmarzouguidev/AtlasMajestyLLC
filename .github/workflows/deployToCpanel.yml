@@ -1,27 +1,34 @@
-name: Deployment to Hostinger
+name: Deploy to Hostinger
+
 on:
   push:
     branches:
-      - mainer
+      - main
+  workflow_dispatch:
+
 jobs:
-  FTP-Deploy-Action:
-    name: FTP-Deploy-Action
+  deploy:
+    name: FTP deploy
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4.2.0
-        with:
-          fetch-depth: 2
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 24
-      - name: Install NPM dependencies
-        run: npm install
-      - name: Build frontend assets
-        run: npm run build
-      - name: FTP-Deploy-Action
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Upload via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          server: ${{ secrets.FTP_SERVER}}
-          username: ${{ secrets.FTP_USERNAME}}
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
+          server-dir: ./
+          exclude: |
+            **/.git*
+            **/.git*/**
+            .github/**
+            .claude/**
+            .agents/**
+            .taste-skill/**
+            _review-shots/**
+            node_modules/**
+            CLAUDE.md
+            README.md
