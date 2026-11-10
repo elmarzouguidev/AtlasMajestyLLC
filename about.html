@@ -16,120 +16,199 @@
   <meta property="og:title" content="About Us | Atlas Majesty LLC">
   <meta property="og:description" content="SEO agency based in Albuquerque, NM dedicated to organic growth, search rankings, and lead generation.">
   <meta property="og:url" content="https://www.atlasmajesty.com/about.html">
+
+  <!-- Fonts: Outfit (headings) + Figtree (text), only the weights in use -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/components.css">
-  <link rel="stylesheet" href="css/pages.css">
-  <link rel="stylesheet" href="css/interactive.css">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400..500&family=Figtree:wght@400..500&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400..500&family=Figtree:wght@400..500&display=swap" rel="stylesheet"></noscript>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/site.css">
 </head>
 <body>
+<a class="skip-link" href="#top">Skip to content</a>
 
-<nav id="site-nav" class="nav--solid" aria-label="Main navigation">
-  <div class="nav-container">
-    <a href="/" class="nav-logo"><div class="nav-logo-icon"><img src="/images/brand/logo-mark-white.png" srcset="/images/brand/logo-mark-white.png 1x, /images/brand/logo-mark-white@2x.png 2x" width="44" height="24" alt="Atlas Majesty LLC"></div><div class="nav-logo-text"><span class="nav-logo-name">Atlas Majesty</span><span class="nav-logo-tagline">SEO &amp; Digital Marketing</span></div></a>
-    <div class="nav-links"><a href="/" class="nav-link">Home</a><a href="seo-services.html" class="nav-link">SEO Services</a><a href="local-seo.html" class="nav-link">Local SEO</a><a href="seo-audit.html" class="nav-link">Free Audit</a><a href="about.html" class="nav-link is-active">About</a><a href="blog/index.html" class="nav-link">Blog</a></div>
-    <div class="nav-cta"><a href="contact.html" class="nav-link hide-mobile">Contact</a><a href="seo-audit.html" class="btn btn--primary btn--sm"><span class="cta-label-full">Get Free SEO Audit</span><span class="cta-label-short">Free Audit</span></a><button id="menu-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg></button></div>
-  </div>
-</nav>
-<div id="menu-overlay" aria-hidden="true"></div>
-<div id="mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation menu">
-  <div class="mobile-menu-header"><a href="/" class="nav-logo"><div class="nav-logo-icon"><img src="/images/brand/logo-mark-white.png" srcset="/images/brand/logo-mark-white.png 1x, /images/brand/logo-mark-white@2x.png 2x" width="44" height="24" alt=""></div><div class="nav-logo-text"><span class="nav-logo-name">Atlas Majesty</span></div></a><button id="menu-close" aria-label="Close navigation menu">✕</button></div>
-  <div class="mobile-nav-section"><div class="mobile-nav-section-label">Main</div><a href="/" class="mobile-nav-link">🏠 Home</a><a href="about.html" class="mobile-nav-link">👥 About</a><a href="blog/index.html" class="mobile-nav-link">📝 Blog</a><a href="contact.html" class="mobile-nav-link">✉️ Contact</a></div>
-  <div class="mobile-nav-section"><div class="mobile-nav-section-label">SEO Services</div><a href="seo-services.html" class="mobile-nav-link">🔍 All SEO Services</a><a href="local-seo.html" class="mobile-nav-link">📍 Local SEO</a><a href="technical-seo.html" class="mobile-nav-link">⚙️ Technical SEO</a><a href="on-page-seo.html" class="mobile-nav-link">📄 On-Page SEO</a><a href="seo-content.html" class="mobile-nav-link">✍️ SEO Content</a><a href="seo-audit.html" class="mobile-nav-link">📊 SEO Audit</a></div>
-  <div class="mobile-menu-footer"><a href="seo-audit.html" class="btn btn--primary btn--full">Get Your Free SEO Audit →</a></div>
-</div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></symbol>
+    <symbol id="i-file" viewBox="0 0 24 24"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="16" x2="8" y1="13" y2="13"/><line x1="16" x2="8" y1="17" y2="17"/></symbol>
+    <symbol id="i-key" viewBox="0 0 24 24"><circle cx="7.5" cy="15.5" r="5.5"/><path d="m21 2-9.6 9.6"/><path d="m15.5 7.5 3 3L22 7l-3-3"/></symbol>
+    <symbol id="i-pen" viewBox="0 0 24 24"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></symbol>
+    <symbol id="i-link" viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></symbol>
+    <symbol id="i-map" viewBox="0 0 24 24"><polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"/><line x1="9" x2="9" y1="3" y2="18"/><line x1="15" x2="15" y1="6" y2="21"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></symbol>
+    <symbol id="i-down" viewBox="0 0 24 24"><polyline points="22 17 13.5 8.5 8.5 13.5 2 7"/><polyline points="16 17 22 17 22 11"/></symbol>
+    <symbol id="i-up" viewBox="0 0 24 24"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></symbol>
+    <symbol id="i-trophy" viewBox="0 0 24 24"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></symbol>
+    <symbol id="i-bulb" viewBox="0 0 24 24"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></symbol>
+    <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></symbol>
+    <symbol id="i-sprout" viewBox="0 0 24 24"><path d="M7 20h10"/><path d="M10 20c5.5-2.5.8-6.4 3-10"/><path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z"/><path d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
+    <symbol id="i-bug" viewBox="0 0 24 24"><path d="m8 2 1.88 1.88"/><path d="M14.12 3.88 16 2"/><path d="M9 7.13v-1a3.003 3.003 0 1 1 6 0v1"/><path d="M12 20c-3.3 0-6-2.7-6-6v-3a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v3c0 3.3-2.7 6-6 6"/><path d="M12 20v-9"/><path d="M6.53 9C4.6 8.8 3 7.1 3 5"/><path d="M6 13H2"/><path d="M3 21c0-2.1 1.7-3.9 3.8-4"/><path d="M20.97 5c0 2.1-1.6 3.8-3.5 4"/><path d="M22 13h-4"/><path d="M17.2 17c2.1.1 3.8 1.9 3.8 4"/></symbol>
+    <symbol id="i-clipboard" viewBox="0 0 24 24"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/></symbol>
+    <symbol id="i-bolt" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></symbol>
+    <symbol id="i-wrench" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></symbol>
+    <symbol id="i-cpu" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M15 2v2M15 20v2M2 15h2M2 9h2M20 15h2M20 9h2M9 2v2M9 20v2"/></symbol>
+    <symbol id="i-shuffle" viewBox="0 0 24 24"><path d="M2 18h1.4c1.3 0 2.5-.6 3.3-1.7l6.1-8.6c.7-1.1 2-1.7 3.3-1.7H22"/><path d="m18 2 4 4-4 4"/><path d="M2 6h1.9c1.5 0 2.9.9 3.6 2.2"/><path d="M22 18h-5.9c-1.3 0-2.6-.7-3.3-1.8l-.5-.8"/><path d="m18 14 4 4-4 4"/></symbol>
+    <symbol id="i-folder" viewBox="0 0 24 24"><path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></symbol>
+    <symbol id="i-tag" viewBox="0 0 24 24"><path d="M12 2H2v10l9.29 9.29c.94.94 2.48.94 3.42 0l6.58-6.58c.94-.94.94-2.48 0-3.42L12 2Z"/><path d="M7 7h.01"/></symbol>
+    <symbol id="i-ruler" viewBox="0 0 24 24"><line x1="21" x2="3" y1="6" y2="6"/><line x1="15" x2="3" y1="12" y2="12"/><line x1="17" x2="3" y1="18" y2="18"/></symbol>
+    <symbol id="i-image" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.09-3.09a2 2 0 0 0-2.82 0L6 21"/></symbol>
+    <symbol id="i-building" viewBox="0 0 24 24"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01M16 6h.01M12 6h.01M12 10h.01M12 14h.01M16 10h.01M16 14h.01M8 10h.01M8 14h.01"/></symbol>
+    <symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></symbol>
+    <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></symbol>
+    <symbol id="i-home" viewBox="0 0 24 24"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+    <symbol id="i-external" viewBox="0 0 24 24"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></symbol>
+  </defs>
+</svg>
 
-<header class="page-hero" aria-labelledby="about-page-title">
-  <div class="container">
-    <nav aria-label="Breadcrumb"><ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList"><li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a itemprop="item" href="/"><span itemprop="name">Home</span></a><meta itemprop="position" content="1"><span aria-hidden="true"> / </span></li><li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><span itemprop="name" style="color:rgba(255,255,255,0.7);">About Us</span><meta itemprop="position" content="2"></li></ol></nav>
-    <div class="page-hero-label">👥 About Our Agency</div>
-    <h1 id="about-page-title" class="page-hero-title">Helping Businesses Build Lasting Visibility in Google Search</h1>
-    <p class="page-hero-desc">Atlas Majesty LLC is a dedicated SEO and digital marketing company headquartered in Albuquerque, New Mexico. We partner with businesses to turn organic search into a reliable growth engine.</p>
-  </div>
-</header>
-
-<main id="main-content">
-
-<section class="section">
-  <div class="container">
-    <div class="about-grid animate-on-scroll">
-      <div>
-        <div class="section-label">Our Story & Mission</div>
-        <h2 class="section-title" style="text-align:left;font-size:clamp(1.875rem,3vw,2.5rem);margin-bottom:1rem;">Clear, Honest, Results-Focused Search Marketing</h2>
-        <div class="divider"></div>
-        <p>In a digital landscape filled with exaggerated promises and complicated jargon, Atlas Majesty LLC was founded on a straightforward principle: provide genuine, high-quality search engine optimization that drives real business outcomes.</p>
-        <p style="margin-top:1rem;margin-bottom:1.5rem;">We believe search visibility should follow a clear path: <strong>Visibility → Traffic → Leads → Growth</strong>. By focusing on technical soundness, thorough keyword research, helpful content, and local search presence, we help our clients connect with the customers who need them most.</p>
-        <p>Whether helping an Albuquerque local business establish top Google Maps rankings or supporting regional brands with comprehensive technical optimization, we tailor our approach to each client's unique market reality.</p>
-      </div>
-      <div>
-        <div style="background:linear-gradient(135deg,var(--brand-darkest),var(--brand-dark));border-radius:1.5rem;padding:2.5rem;color:white;box-shadow:var(--shadow-xl);">
-          <div style="font-size:0.75rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--brand-tint-strong);font-weight:700;margin-bottom:1rem;">Company Overview</div>
-          <h3 style="color:white;font-size:1.5rem;margin-bottom:1.5rem;">Atlas Majesty LLC</h3>
-          <div style="display:flex;flex-direction:column;gap:1rem;font-size:0.95rem;color:rgba(255,255,255,0.8);">
-            <div>📍 <strong>Headquarters:</strong> 1209 Mountain Road, Ste N, Albuquerque, NM 87110</div>
-            <div>🎯 <strong>Core Focus:</strong> Organic Search Optimization &amp; Local Search</div>
-            <div>⚡ <strong>Approach:</strong> White-hat, technical-first, data-backed execution</div>
-            <div>🤝 <strong>Client Philosophy:</strong> Transparent communication &amp; custom roadmaps</div>
+<header class="nav on-dark">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="Atlas Majesty LLC — Home">
+      <img src="/images/brand/logo-mark-white.png" srcset="/images/brand/logo-mark-white.png 1x, /images/brand/logo-mark-white@2x.png 2x" width="44" height="24" alt=""><span>Atlas Majesty</span>
+    </a>
+    <!-- TODO: phone (header) -->
+    <nav class="nav__links" aria-label="Main navigation">
+      <div class="nav__item" data-dd>
+        <button class="nav__link" type="button" aria-expanded="false" aria-controls="services-panel">SEO Services <svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg></button>
+        <div class="nav__panel" id="services-panel">
+          <div class="wrap">
+            <a href="seo-services.html"><strong>All SEO Services</strong><span>Overview of every service we offer</span></a>
+            <a href="local-seo.html"><strong>Local SEO</strong><span>Google Maps &amp; local search visibility</span></a>
+            <a href="technical-seo.html"><strong>Technical SEO</strong><span>Site architecture &amp; crawlability</span></a>
+            <a href="on-page-seo.html"><strong>On-Page SEO</strong><span>Keywords, metadata &amp; content</span></a>
+            <a href="seo-content.html"><strong>SEO Content</strong><span>Content that attracts &amp; converts</span></a>
+            <a href="seo-audit.html"><strong>SEO Audit</strong><span>Identify your biggest opportunities</span></a>
           </div>
         </div>
       </div>
+      <a class="nav__link" href="local-seo.html">Local SEO</a>
+      <a class="nav__link" href="about.html" aria-current="page">About</a>
+      <a class="nav__link" href="blog/index.html">Blog</a>
+      <a class="nav__link" href="contact.html">Contact</a>
+    </nav>
+    <div class="nav__end">
+      <a class="btn btn--primary" href="seo-audit.html" id="nav-cta-btn">Get Free SEO Audit</a>
+      <button class="nav__toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="menu" aria-label="Open navigation menu"><svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg></button>
     </div>
+  </div>
+</header>
 
-    <div class="about-values animate-on-scroll delay-1">
-      <div class="about-value-card">
-        <div class="about-value-icon">🎯</div>
-        <div class="about-value-title">No False Promises</div>
-        <div class="about-value-desc">We don't guarantee overnight #1 rankings. We set realistic benchmarks, explain the steps required, and build lasting, sustainable organic visibility.</div>
-      </div>
-      <div class="about-value-card">
-        <div class="about-value-icon">📊</div>
-        <div class="about-value-title">Data-Driven Execution</div>
-        <div class="about-value-desc">Every optimization is guided by search data, competitor benchmarks, user intent analysis, and proven technical SEO best practices.</div>
-      </div>
-      <div class="about-value-card">
-        <div class="about-value-icon">📍</div>
-        <div class="about-value-title">Local Market Insight</div>
-        <div class="about-value-desc">Located in Albuquerque, NM, we understand the local business environment and the nuances of geographic search intent.</div>
-      </div>
-      <div class="about-value-card">
-        <div class="about-value-icon">🔒</div>
-        <div class="about-value-title">Transparent Partnership</div>
-        <div class="about-value-desc">You receive clear explanations of what work is being done, why it matters, and how it impacts your visibility over time.</div>
-      </div>
+<div class="sheet on-dark" id="menu" data-sheet role="dialog" aria-modal="true" aria-label="Navigation menu">
+  <div class="wrap">
+    <div class="sheet__top">
+      <a class="brand" href="/"><img src="/images/brand/logo-mark-white.png" srcset="/images/brand/logo-mark-white.png 1x, /images/brand/logo-mark-white@2x.png 2x" width="44" height="24" alt=""><span>Atlas Majesty</span></a>
+      <button class="nav__toggle" type="button" data-menu-close aria-label="Close navigation menu"><svg class="icon" aria-hidden="true"><use href="#i-x"/></svg></button>
+    </div>
+    <div class="sheet__group">
+      <div class="sheet__title">SEO Services</div>
+      <a class="sheet__row" href="seo-services.html">All SEO Services</a>
+      <a class="sheet__row" href="local-seo.html">Local SEO</a>
+      <a class="sheet__row" href="technical-seo.html">Technical SEO</a>
+      <a class="sheet__row" href="on-page-seo.html">On-Page SEO</a>
+      <a class="sheet__row" href="seo-content.html">SEO Content</a>
+      <a class="sheet__row" href="seo-audit.html">SEO Audit</a>
+    </div>
+    <div class="sheet__group">
+      <div class="sheet__title">Company</div>
+      <a class="sheet__row" href="about.html" aria-current="page">About</a>
+      <a class="sheet__row" href="blog/index.html">Blog</a>
+      <a class="sheet__row" href="contact.html">Contact</a>
+    </div>
+    <div class="sheet__bottom"><a class="btn btn--primary" href="seo-audit.html">Get Your Free SEO Audit <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+  </div>
+</div>
+
+<main id="top">
+
+<section class="page-hero on-dark" aria-labelledby="about-page-title">
+  <div class="wrap">
+    <img class="hero__mark enter" style="--i:2" src="/images/brand/logo-mark-white@2x.png" width="717" height="386" alt="" aria-hidden="true" fetchpriority="low">
+    <div class="hero__main">
+    <nav aria-label="Breadcrumb"><ol class="crumbs" itemscope itemtype="https://schema.org/BreadcrumbList"><li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a itemprop="item" href="/"><span itemprop="name">Home</span></a><meta itemprop="position" content="1"><span aria-hidden="true">/</span></li><li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><span itemprop="name" aria-current="page">About Us</span><meta itemprop="position" content="2"></li></ol></nav>
+    <div class="label enter" style="--i:0"><svg class="icon" aria-hidden="true"><use href="#i-users"/></svg>About Our Agency</div>
+    <h1 id="about-page-title" class="enter" style="--i:1">Helping Businesses Build Lasting Visibility in Google Search</h1>
+    <p class="page-hero__lead enter" style="--i:2">Atlas Majesty LLC is a dedicated SEO and digital marketing company headquartered in Albuquerque, New Mexico. We partner with businesses to turn organic search into a reliable growth engine.</p>
     </div>
   </div>
 </section>
 
-<!-- CTA -->
-<section class="audit-section section">
-  <div class="container" style="text-align:center;position:relative;z-index:1;">
-    <div class="section-label section-label--amber" style="display:inline-flex;margin-bottom:1.5rem;">Work With Us</div>
-    <h2 class="section-title section-title--white" style="max-width:650px;margin:0 auto 1rem;">Ready to Partner for Search Growth?</h2>
-    <p class="section-subtitle section-subtitle--white" style="margin-bottom:2.5rem;">Contact us today or request a free SEO audit to start discussing your website's search performance.</p>
-    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
-      <a href="seo-audit.html" class="btn btn--primary btn--xl">Get Free SEO Audit →</a>
-      <a href="contact.html" class="btn btn--ghost btn--xl">Contact Us</a>
-    </div>
+<section class="section g-main">
+  <div class="wrap">
+<div class="grid split"><div class="span-6"><div class="label">Our Story & Mission</div><h2>Clear, Honest, Results-Focused Search Marketing</h2><div class="prose"><p>In a digital landscape filled with exaggerated promises and complicated jargon, Atlas Majesty LLC was founded on a straightforward principle: provide genuine, high-quality search engine optimization that drives real business outcomes.</p><p>We believe search visibility should follow a clear path: <strong>Visibility → Traffic → Leads → Growth</strong>. By focusing on technical soundness, thorough keyword research, helpful content, and local search presence, we help our clients connect with the customers who need them most.</p><p>Whether helping an Albuquerque local business establish top Google Maps rankings or supporting regional brands with comprehensive technical optimization, we tailor our approach to each client's unique market reality.</p></div></div><div class="span-6 start-7"><div class="card facts"><div class="label">Company Overview</div><h3>Atlas Majesty LLC</h3><ul class="facts__list"><li><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg><div><strong>Headquarters:</strong><span>1209 Mountain Road, Ste N, Albuquerque, NM 87110</span></div></li><li><svg class="icon" aria-hidden="true"><use href="#i-target"/></svg><div><strong>Core Focus:</strong><span>Organic Search Optimization & Local Search</span></div></li><li><svg class="icon" aria-hidden="true"><use href="#i-bolt"/></svg><div><strong>Approach:</strong><span>White-hat, technical-first, data-backed execution</span></div></li><li><svg class="icon" aria-hidden="true"><use href="#i-users"/></svg><div><strong>Client Philosophy:</strong><span>Transparent communication & custom roadmaps</span></div></li></ul></div></div></div>
+<div class="mt-8"><div class="grid"><div class="tile span-3"><div class="tile-icon"><svg class="icon" aria-hidden="true"><use href="#i-target"/></svg></div><h3>No False Promises</h3><p>We don't guarantee overnight #1 rankings. We set realistic benchmarks, explain the steps required, and build lasting, sustainable organic visibility.</p></div><div class="tile span-3"><div class="tile-icon"><svg class="icon" aria-hidden="true"><use href="#i-chart"/></svg></div><h3>Data-Driven Execution</h3><p>Every optimization is guided by search data, competitor benchmarks, user intent analysis, and proven technical SEO best practices.</p></div><div class="tile span-3"><div class="tile-icon"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg></div><h3>Local Market Insight</h3><p>Located in Albuquerque, NM, we understand the local business environment and the nuances of geographic search intent.</p></div><div class="tile span-3"><div class="tile-icon"><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg></div><h3>Transparent Partnership</h3><p>You receive clear explanations of what work is being done, why it matters, and how it impacts your visibility over time.</p></div></div></div>
+  </div>
+</section>
+
+<section class="close-band g-dark on-dark" aria-labelledby="cta-heading" data-bar-hide>
+  <div class="wrap close">
+    <div class="label">Work With Us</div><h2 id="cta-heading">Ready to Partner for Search Growth?</h2><p data-hl>Contact us today or request a free SEO audit to start discussing your website's search performance.</p><div class="btn-row"><a href="seo-audit.html" class="btn btn--primary">Get Free SEO Audit <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a><a href="contact.html" class="btn btn--secondary">Contact Us</a></div>
   </div>
 </section>
 
 </main>
 
-<footer class="site-footer" role="contentinfo">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand"><a href="/" class="nav-logo" style="margin-bottom:1.25rem;display:inline-flex;"><div class="nav-logo-icon"><img src="/images/brand/logo-mark-white.png" srcset="/images/brand/logo-mark-white.png 1x, /images/brand/logo-mark-white@2x.png 2x" width="44" height="24" alt=""></div><div class="nav-logo-text"><span class="nav-logo-name">Atlas Majesty</span><span class="nav-logo-tagline">SEO &amp; Digital Marketing</span></div></a><p>Professional SEO services based in Albuquerque, New Mexico.</p><address class="footer-address"><strong>Atlas Majesty LLC</strong><br>1209 Mountain Road, Ste N<br>Albuquerque, NM 87110</address><p class="footer-email"><a href="mailto:support@atlasmajesty.com">support@atlasmajesty.com</a></p></div>
-      <nav aria-label="SEO Services navigation"><div class="footer-nav-title">SEO Services</div><a href="seo-services.html" class="footer-nav-link">All SEO Services</a><a href="local-seo.html" class="footer-nav-link">Local SEO</a><a href="technical-seo.html" class="footer-nav-link">Technical SEO</a><a href="on-page-seo.html" class="footer-nav-link">On-Page SEO</a><a href="seo-content.html" class="footer-nav-link">SEO Content</a><a href="seo-audit.html" class="footer-nav-link">SEO Audit</a></nav>
-      <nav aria-label="Company navigation"><div class="footer-nav-title">Company</div><a href="about.html" class="footer-nav-link">About Us</a><a href="blog/index.html" class="footer-nav-link">Blog</a><a href="contact.html" class="footer-nav-link">Contact</a></nav>
-      <nav aria-label="Legal navigation"><div class="footer-nav-title">Legal</div><a href="privacy-policy.html" class="footer-nav-link">Privacy Policy</a><a href="terms-of-service.html" class="footer-nav-link">Terms of Service</a><a href="cookie-policy.html" class="footer-nav-link">Cookie Policy</a></nav>
+<footer class="closing on-dark">
+  <div class="wrap">
+    <div class="grid directory">
+      <div class="span-5">
+        <a class="brand" href="/" aria-label="Atlas Majesty LLC — Home"><img src="/images/brand/logo-mark-white.png" srcset="/images/brand/logo-mark-white.png 1x, /images/brand/logo-mark-white@2x.png 2x" width="44" height="24" alt="" loading="lazy"><span>Atlas Majesty</span></a>
+        <p>Helping businesses in Albuquerque and beyond improve their online visibility, attract qualified organic traffic, and generate more leads through strategic SEO.</p>
+        <address itemscope itemtype="https://schema.org/PostalAddress">
+          <strong itemprop="name">Atlas Majesty LLC</strong><br>
+          <span itemprop="streetAddress">1209 Mountain Road, Ste N</span><br>
+          <span itemprop="addressLocality">Albuquerque</span>, <span itemprop="addressRegion">NM</span> <span itemprop="postalCode">87110</span>
+        </address>
+        <!-- TODO: phone (footer) -->
+        <a class="mail link" href="mailto:support@atlasmajesty.com" itemprop="email">support@atlasmajesty.com</a>
+      </div>
+      <nav class="span-2 start-7" aria-label="SEO Services navigation">
+        <h3>SEO Services</h3>
+        <a href="seo-services.html">All SEO Services</a>
+        <a href="local-seo.html">Local SEO</a>
+        <a href="technical-seo.html">Technical SEO</a>
+        <a href="on-page-seo.html">On-Page SEO</a>
+        <a href="seo-content.html">SEO Content</a>
+        <a href="seo-audit.html">SEO Audit</a>
+      </nav>
+      <nav class="span-2" aria-label="Company navigation">
+        <h3>Company</h3>
+        <a href="about.html">About Us</a>
+        <a href="blog/index.html">Blog &amp; SEO Resources</a>
+        <a href="contact.html">Contact</a>
+        <a href="seo-audit.html">Free SEO Audit</a>
+      </nav>
+      <nav class="span-2" aria-label="Legal navigation">
+        <h3>Legal</h3>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms-of-service.html">Terms of Service</a>
+        <a href="cookie-policy.html">Cookie Policy</a>
+      </nav>
     </div>
-    <div class="footer-bottom"><p class="footer-copyright">&copy; <span id="copyright-year">2026</span> Atlas Majesty LLC. All rights reserved. · Albuquerque, NM 87110</p><div class="footer-legal"><a href="privacy-policy.html">Privacy Policy</a><a href="terms-of-service.html">Terms of Service</a><a href="sitemap.xml">Sitemap</a></div></div>
+    <div class="legal">
+      <p>&copy; 2026 Atlas Majesty LLC. All rights reserved. · Albuquerque, NM 87110</p>
+      <div><a href="privacy-policy.html">Privacy Policy</a><a href="terms-of-service.html">Terms of Service</a><a href="sitemap.xml">Sitemap</a></div>
+    </div>
   </div>
 </footer>
-<button id="back-to-top" aria-label="Back to top">↑</button>
-<script src="js/main.js" defer></script>
-<script src="js/interactions.js" defer></script>
+
+<div class="actionbar on-dark" data-actionbar><a class="btn btn--primary" href="seo-audit.html">Get Your Free SEO Audit</a></div>
+
+<script src="js/site.js" defer></script>
 </body>
 </html>
