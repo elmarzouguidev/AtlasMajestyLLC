@@ -27,6 +27,7 @@ jobs:
             .github/**
             .claude/**
             .agents/**
+            .aider-desk/**
             .taste-skill/**
             _review-shots/**
             node_modules/**

@@ -16,13 +16,6 @@
   <meta property="og:title" content="SEO Services | Atlas Majesty LLC">
   <meta property="og:description" content="Comprehensive SEO services to improve your Google rankings, attract organic traffic, and grow your business. Albuquerque, NM.">
   <meta property="og:url" content="https://www.atlasmajesty.com/seo-services.html">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/components.css">
-  <link rel="stylesheet" href="css/pages.css">
-  <link rel="stylesheet" href="css/interactive.css">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -36,309 +29,229 @@
     "areaServed": "Albuquerque, NM"
   }
   </script>
+
+  <!-- Fonts: Outfit (headings) + Figtree (text), only the weights in use -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400..500&family=Figtree:wght@400..500&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400..500&family=Figtree:wght@400..500&display=swap" rel="stylesheet"></noscript>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/site.css">
 </head>
 <body>
+<a class="skip-link" href="#top">Skip to content</a>
 
-<!-- NAV (shared) -->
-<nav id="site-nav" class="nav--solid" aria-label="Main navigation">
-  <div class="nav-container">
-    <a href="/" class="nav-logo" aria-label="Atlas Majesty LLC — Home">
-      <div class="nav-logo-icon"><img src="/images/brand/logo-mark-white.png" srcset="/images/brand/logo-mark-white.png 1x, /images/brand/logo-mark-white@2x.png 2x" width="44" height="24" alt="Atlas Majesty LLC"></div>
-      <div class="nav-logo-text"><span class="nav-logo-name">Atlas Majesty</span><span class="nav-logo-tagline">SEO &amp; Digital Marketing</span></div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></symbol>
+    <symbol id="i-file" viewBox="0 0 24 24"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="16" x2="8" y1="13" y2="13"/><line x1="16" x2="8" y1="17" y2="17"/></symbol>
+    <symbol id="i-key" viewBox="0 0 24 24"><circle cx="7.5" cy="15.5" r="5.5"/><path d="m21 2-9.6 9.6"/><path d="m15.5 7.5 3 3L22 7l-3-3"/></symbol>
+    <symbol id="i-pen" viewBox="0 0 24 24"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></symbol>
+    <symbol id="i-link" viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></symbol>
+    <symbol id="i-map" viewBox="0 0 24 24"><polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"/><line x1="9" x2="9" y1="3" y2="18"/><line x1="15" x2="15" y1="6" y2="21"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></symbol>
+    <symbol id="i-down" viewBox="0 0 24 24"><polyline points="22 17 13.5 8.5 8.5 13.5 2 7"/><polyline points="16 17 22 17 22 11"/></symbol>
+    <symbol id="i-up" viewBox="0 0 24 24"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></symbol>
+    <symbol id="i-trophy" viewBox="0 0 24 24"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></symbol>
+    <symbol id="i-bulb" viewBox="0 0 24 24"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></symbol>
+    <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></symbol>
+    <symbol id="i-sprout" viewBox="0 0 24 24"><path d="M7 20h10"/><path d="M10 20c5.5-2.5.8-6.4 3-10"/><path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z"/><path d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
+    <symbol id="i-bug" viewBox="0 0 24 24"><path d="m8 2 1.88 1.88"/><path d="M14.12 3.88 16 2"/><path d="M9 7.13v-1a3.003 3.003 0 1 1 6 0v1"/><path d="M12 20c-3.3 0-6-2.7-6-6v-3a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v3c0 3.3-2.7 6-6 6"/><path d="M12 20v-9"/><path d="M6.53 9C4.6 8.8 3 7.1 3 5"/><path d="M6 13H2"/><path d="M3 21c0-2.1 1.7-3.9 3.8-4"/><path d="M20.97 5c0 2.1-1.6 3.8-3.5 4"/><path d="M22 13h-4"/><path d="M17.2 17c2.1.1 3.8 1.9 3.8 4"/></symbol>
+    <symbol id="i-clipboard" viewBox="0 0 24 24"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/></symbol>
+    <symbol id="i-bolt" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></symbol>
+    <symbol id="i-wrench" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></symbol>
+    <symbol id="i-cpu" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M15 2v2M15 20v2M2 15h2M2 9h2M20 15h2M20 9h2M9 2v2M9 20v2"/></symbol>
+    <symbol id="i-shuffle" viewBox="0 0 24 24"><path d="M2 18h1.4c1.3 0 2.5-.6 3.3-1.7l6.1-8.6c.7-1.1 2-1.7 3.3-1.7H22"/><path d="m18 2 4 4-4 4"/><path d="M2 6h1.9c1.5 0 2.9.9 3.6 2.2"/><path d="M22 18h-5.9c-1.3 0-2.6-.7-3.3-1.8l-.5-.8"/><path d="m18 14 4 4-4 4"/></symbol>
+    <symbol id="i-folder" viewBox="0 0 24 24"><path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></symbol>
+    <symbol id="i-tag" viewBox="0 0 24 24"><path d="M12 2H2v10l9.29 9.29c.94.94 2.48.94 3.42 0l6.58-6.58c.94-.94.94-2.48 0-3.42L12 2Z"/><path d="M7 7h.01"/></symbol>
+    <symbol id="i-ruler" viewBox="0 0 24 24"><line x1="21" x2="3" y1="6" y2="6"/><line x1="15" x2="3" y1="12" y2="12"/><line x1="17" x2="3" y1="18" y2="18"/></symbol>
+    <symbol id="i-image" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.09-3.09a2 2 0 0 0-2.82 0L6 21"/></symbol>
+    <symbol id="i-building" viewBox="0 0 24 24"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01M16 6h.01M12 6h.01M12 10h.01M12 14h.01M16 10h.01M16 14h.01M8 10h.01M8 14h.01"/></symbol>
+    <symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></symbol>
+    <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></symbol>
+    <symbol id="i-home" viewBox="0 0 24 24"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+    <symbol id="i-external" viewBox="0 0 24 24"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></symbol>
+  </defs>
+</svg>
+
+<header class="nav on-dark">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="Atlas Majesty LLC — Home">
+      <img src="/images/brand/logo-mark-white.png" srcset="/images/brand/logo-mark-white.png 1x, /images/brand/logo-mark-white@2x.png 2x" width="44" height="24" alt=""><span>Atlas Majesty</span>
     </a>
-    <div class="nav-links">
-      <a href="/" class="nav-link">Home</a>
-      <a href="seo-services.html" class="nav-link is-active">SEO Services</a>
-      <a href="local-seo.html" class="nav-link">Local SEO</a>
-      <a href="seo-audit.html" class="nav-link">Free Audit</a>
-      <a href="about.html" class="nav-link">About</a>
-      <a href="blog/index.html" class="nav-link">Blog</a>
-    </div>
-    <div class="nav-cta">
-      <a href="contact.html" class="nav-link hide-mobile">Contact</a>
-      <a href="seo-audit.html" class="btn btn--primary btn--sm"><span class="cta-label-full">Get Free SEO Audit</span><span class="cta-label-short">Free Audit</span></a>
-      <button id="menu-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
-      </button>
-    </div>
-  </div>
-</nav>
-<div id="menu-overlay" aria-hidden="true"></div>
-<div id="mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation menu">
-  <div class="mobile-menu-header">
-    <a href="/" class="nav-logo"><div class="nav-logo-icon"><img src="/images/brand/logo-mark-white.png" srcset="/images/brand/logo-mark-white.png 1x, /images/brand/logo-mark-white@2x.png 2x" width="44" height="24" alt=""></div><div class="nav-logo-text"><span class="nav-logo-name">Atlas Majesty</span></div></a>
-    <button id="menu-close" aria-label="Close navigation menu">✕</button>
-  </div>
-  <div class="mobile-nav-section">
-    <div class="mobile-nav-section-label">Main</div>
-    <a href="/" class="mobile-nav-link">🏠 Home</a>
-    <a href="about.html" class="mobile-nav-link">👥 About</a>
-    <a href="blog/index.html" class="mobile-nav-link">📝 Blog</a>
-    <a href="contact.html" class="mobile-nav-link">✉️ Contact</a>
-  </div>
-  <div class="mobile-nav-section">
-    <div class="mobile-nav-section-label">SEO Services</div>
-    <a href="seo-services.html" class="mobile-nav-link">🔍 All SEO Services</a>
-    <a href="local-seo.html" class="mobile-nav-link">📍 Local SEO</a>
-    <a href="technical-seo.html" class="mobile-nav-link">⚙️ Technical SEO</a>
-    <a href="on-page-seo.html" class="mobile-nav-link">📄 On-Page SEO</a>
-    <a href="seo-content.html" class="mobile-nav-link">✍️ SEO Content</a>
-    <a href="seo-audit.html" class="mobile-nav-link">📊 SEO Audit</a>
-  </div>
-  <div class="mobile-menu-footer"><a href="seo-audit.html" class="btn btn--primary btn--full">Get Your Free SEO Audit →</a></div>
-</div>
-
-<!-- Page Hero -->
-<header class="page-hero" aria-labelledby="page-hero-title">
-  <div class="container">
-    <nav aria-label="Breadcrumb">
-      <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
-        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a itemprop="item" href="/"><span itemprop="name">Home</span></a><meta itemprop="position" content="1"><span aria-hidden="true"> / </span></li>
-        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><span itemprop="name" style="color:rgba(255,255,255,0.7);">SEO Services</span><meta itemprop="position" content="2"></li>
-      </ol>
+    <!-- TODO: phone (header) -->
+    <nav class="nav__links" aria-label="Main navigation">
+      <div class="nav__item" data-dd>
+        <button class="nav__link" type="button" aria-expanded="false" aria-controls="services-panel" aria-current="true">SEO Services <svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg></button>
+        <div class="nav__panel" id="services-panel">
+          <div class="wrap">
+            <a href="seo-services.html" aria-current="page"><strong>All SEO Services</strong><span>Overview of every service we offer</span></a>
+            <a href="local-seo.html"><strong>Local SEO</strong><span>Google Maps &amp; local search visibility</span></a>
+            <a href="technical-seo.html"><strong>Technical SEO</strong><span>Site architecture &amp; crawlability</span></a>
+            <a href="on-page-seo.html"><strong>On-Page SEO</strong><span>Keywords, metadata &amp; content</span></a>
+            <a href="seo-content.html"><strong>SEO Content</strong><span>Content that attracts &amp; converts</span></a>
+            <a href="seo-audit.html"><strong>SEO Audit</strong><span>Identify your biggest opportunities</span></a>
+          </div>
+        </div>
+      </div>
+      <a class="nav__link" href="local-seo.html">Local SEO</a>
+      <a class="nav__link" href="about.html">About</a>
+      <a class="nav__link" href="blog/index.html">Blog</a>
+      <a class="nav__link" href="contact.html">Contact</a>
     </nav>
-    <div class="page-hero-label">What We Offer</div>
-    <h1 id="page-hero-title" class="page-hero-title">Comprehensive SEO Services Designed to Drive Real Business Growth</h1>
-    <p class="page-hero-desc">From local search visibility to technical optimization to content strategy — we offer a full suite of SEO services tailored to your business goals.</p>
-    <div class="page-hero-ctas">
-      <a href="seo-audit.html" class="btn btn--primary btn--lg">Get Your Free SEO Audit →</a>
-      <a href="contact.html" class="btn btn--ghost btn--lg">Request a Consultation</a>
+    <div class="nav__end">
+      <a class="btn btn--primary" href="seo-audit.html" id="nav-cta-btn">Get Free SEO Audit</a>
+      <button class="nav__toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="menu" aria-label="Open navigation menu"><svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg></button>
     </div>
   </div>
 </header>
 
-<main id="main-content">
-
-<!-- Services Detail Section -->
-<section class="section" aria-labelledby="local-seo-service">
-  <div class="container">
-    <div class="service-detail-row animate-on-scroll">
-      <div>
-        <div class="section-label">Service 01</div>
-        <h2 id="local-seo-service" class="section-title" style="text-align:left;font-size:clamp(1.875rem,3vw,2.5rem);">Local SEO</h2>
-        <div class="divider"></div>
-        <p>Local SEO helps your business appear prominently when customers in your area search for the products or services you offer. Whether you're targeting searches in Albuquerque or across New Mexico, local SEO ensures your business shows up when and where it matters.</p>
-        <p style="margin-top:1rem;margin-bottom:1.5rem;">We optimize your Google Business Profile, build local citations, develop locally relevant content, and strengthen all aspects of your local search presence.</p>
-        <ul class="check-list">
-          <li>Google Business Profile optimization</li>
-          <li>Google Maps Pack visibility improvement</li>
-          <li>Local keyword targeting and content</li>
-          <li>NAP consistency across directories</li>
-          <li>Local citation building and cleanup</li>
-          <li>Review strategy support</li>
-        </ul>
-        <div style="margin-top:2rem;"><a href="local-seo.html" class="btn btn--blue">Learn More About Local SEO →</a></div>
-      </div>
-      <div style="display:flex;align-items:center;">
-        <img src="images/local-seo-visual.jpg" alt="Local SEO visualization showing Google Maps and business search results" width="640" height="480" loading="lazy" style="border-radius:1.5rem;box-shadow:0 20px 50px rgba(var(--brand-darkest-rgb),0.12);width:100%;">
-      </div>
+<div class="sheet on-dark" id="menu" data-sheet role="dialog" aria-modal="true" aria-label="Navigation menu">
+  <div class="wrap">
+    <div class="sheet__top">
+      <a class="brand" href="/"><img src="/images/brand/logo-mark-white.png" srcset="/images/brand/logo-mark-white.png 1x, /images/brand/logo-mark-white@2x.png 2x" width="44" height="24" alt=""><span>Atlas Majesty</span></a>
+      <button class="nav__toggle" type="button" data-menu-close aria-label="Close navigation menu"><svg class="icon" aria-hidden="true"><use href="#i-x"/></svg></button>
     </div>
+    <div class="sheet__group">
+      <div class="sheet__title">SEO Services</div>
+      <a class="sheet__row" href="seo-services.html" aria-current="page">All SEO Services</a>
+      <a class="sheet__row" href="local-seo.html">Local SEO</a>
+      <a class="sheet__row" href="technical-seo.html">Technical SEO</a>
+      <a class="sheet__row" href="on-page-seo.html">On-Page SEO</a>
+      <a class="sheet__row" href="seo-content.html">SEO Content</a>
+      <a class="sheet__row" href="seo-audit.html">SEO Audit</a>
+    </div>
+    <div class="sheet__group">
+      <div class="sheet__title">Company</div>
+      <a class="sheet__row" href="about.html">About</a>
+      <a class="sheet__row" href="blog/index.html">Blog</a>
+      <a class="sheet__row" href="contact.html">Contact</a>
+    </div>
+    <div class="sheet__bottom"><a class="btn btn--primary" href="seo-audit.html">Get Your Free SEO Audit <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+  </div>
+</div>
+
+<main id="top">
+
+<section class="page-hero on-dark" aria-labelledby="page-hero-title">
+  <div class="wrap">
+    <nav aria-label="Breadcrumb"><ol class="crumbs" itemscope itemtype="https://schema.org/BreadcrumbList"><li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a itemprop="item" href="/"><span itemprop="name">Home</span></a><meta itemprop="position" content="1"><span aria-hidden="true">/</span></li><li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><span itemprop="name" aria-current="page">SEO Services</span><meta itemprop="position" content="2"></li></ol></nav>
+    <div class="label enter" style="--i:0">What We Offer</div>
+    <h1 id="page-hero-title" class="enter" style="--i:1">Comprehensive SEO Services Designed to Drive Real Business Growth</h1>
+    <p class="page-hero__lead enter" style="--i:2">From local search visibility to technical optimization to content strategy — we offer a full suite of SEO services tailored to your business goals.</p>
+    <div class="btn-row enter" style="--i:3"><a href="seo-audit.html" class="btn btn--primary" data-bar-hide>Get Your Free SEO Audit <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a><a href="contact.html" class="btn btn--secondary">Request a Consultation</a></div>
   </div>
 </section>
 
-<section class="section section--surface" aria-labelledby="technical-seo-service" id="technical-seo">
-  <div class="container">
-    <div class="service-detail-row reverse animate-on-scroll">
-      <div>
-        <div class="section-label">Service 02</div>
-        <h2 id="technical-seo-service" class="section-title" style="text-align:left;font-size:clamp(1.875rem,3vw,2.5rem);">Technical SEO</h2>
-        <div class="divider"></div>
-        <p>Technical SEO ensures that search engines can effectively crawl, understand, and index your website. Even the best content will underperform if technical issues prevent Google from properly reading your pages.</p>
-        <p style="margin-top:1rem;margin-bottom:1.5rem;">We conduct thorough technical audits and implement improvements across site architecture, crawlability, indexation, page speed, Core Web Vitals, structured data, and more.</p>
-        <ul class="check-list">
-          <li>Crawlability and indexation analysis</li>
-          <li>Core Web Vitals optimization</li>
-          <li>Site architecture and URL structure</li>
-          <li>Structured data / Schema.org markup</li>
-          <li>Mobile usability and responsiveness</li>
-          <li>Page speed and performance improvements</li>
-        </ul>
-        <div style="margin-top:2rem;"><a href="technical-seo.html" class="btn btn--blue">Learn More About Technical SEO →</a></div>
-      </div>
-      <div style="display:flex;align-items:center;">
-        <div style="background:linear-gradient(135deg,var(--brand-darkest),var(--brand-dark));border-radius:1.5rem;padding:3rem;display:flex;flex-direction:column;gap:1rem;width:100%;">
-          <div class="info-card"><div class="info-card-icon">🔍</div><div class="info-card-title">Crawlability</div><div class="info-card-desc">Ensure search engines can find and index every important page.</div></div>
-          <div class="info-card"><div class="info-card-icon">⚡</div><div class="info-card-title">Core Web Vitals</div><div class="info-card-desc">Optimize for Google's page experience signals — LCP, CLS, and INP.</div></div>
-          <div class="info-card"><div class="info-card-icon">🏗️</div><div class="info-card-title">Site Architecture</div><div class="info-card-desc">Build a logical URL structure that helps Google understand your site.</div></div>
-        </div>
-      </div>
-    </div>
+<section class="section g-main" aria-labelledby="local-seo-service">
+  <div class="wrap">
+<div class="grid split"><div class="span-6"><div class="label">Service 01</div><h2 id="local-seo-service">Local SEO</h2><div class="prose"><p>Local SEO helps your business appear prominently when customers in your area search for the products or services you offer. Whether you're targeting searches in Albuquerque or across New Mexico, local SEO ensures your business shows up when and where it matters.</p><p>We optimize your Google Business Profile, build local citations, develop locally relevant content, and strengthen all aspects of your local search presence.</p></div><div class="btn-row"><a href="local-seo.html" class="btn btn--primary">Learn More About Local SEO <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></div></div><div class="span-6 start-7"><div class="card card--list"><ul class="ticks"><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>Google Business Profile optimization</span></li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>Google Maps Pack visibility improvement</span></li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>Local keyword targeting and content</span></li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>NAP consistency across directories</span></li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>Local citation building and cleanup</span></li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>Review strategy support</span></li></ul></div></div></div>
   </div>
 </section>
 
-<section class="section" aria-labelledby="on-page-seo-service">
-  <div class="container">
-    <div class="service-detail-row animate-on-scroll">
-      <div>
-        <div class="section-label">Service 03</div>
-        <h2 id="on-page-seo-service" class="section-title" style="text-align:left;font-size:clamp(1.875rem,3vw,2.5rem);">On-Page SEO</h2>
-        <div class="divider"></div>
-        <p>On-Page SEO is the process of optimizing individual web pages so they rank higher for targeted search queries and attract the right visitors. It ensures every page on your website is optimized to communicate relevance and value to both search engines and real users.</p>
-        <ul class="check-list" style="margin-top:1.5rem;">
-          <li>Keyword research and targeting</li>
-          <li>Title tags and meta descriptions</li>
-          <li>Heading structure (H1, H2, H3)</li>
-          <li>Content optimization for search intent</li>
-          <li>Internal linking strategy</li>
-          <li>Image optimization and alt text</li>
-        </ul>
-        <div style="margin-top:2rem;"><a href="on-page-seo.html" class="btn btn--blue">Learn More About On-Page SEO →</a></div>
-      </div>
-      <div style="display:flex;align-items:center;justify-content:center;">
-        <div style="background:var(--brand-surface);border-radius:1.5rem;padding:2rem;width:100%;border:1px solid var(--color-border);">
-          <div style="background:white;border-radius:0.75rem;padding:1.5rem;box-shadow:0 4px 20px rgba(0,0,0,0.06);margin-bottom:1rem;">
-            <div style="font-size:0.7rem;color:var(--color-text-muted);margin-bottom:0.25rem;">Title Tag</div>
-            <div style="font-size:0.95rem;font-weight:700;color:var(--brand-primary);">SEO Services in Albuquerque, NM | Atlas Majesty LLC</div>
-            <div style="font-size:0.8rem;color:var(--color-text-muted);margin-top:0.25rem;">www.atlasmajesty.com</div>
-            <div style="font-size:0.8rem;color:#4B5563;margin-top:0.5rem;">Professional SEO services in Albuquerque helping businesses rank higher on Google, attract qualified organic traffic, and generate more leads.</div>
-          </div>
-          <div style="display:flex;gap:0.75rem;flex-wrap:wrap;">
-            <div class="badge badge--blue">H1: Optimized</div>
-            <div class="badge badge--blue">Keywords: Targeted</div>
-            <div class="badge badge--success">Meta: Compelling</div>
-          </div>
-        </div>
-      </div>
-    </div>
+<section class="section g-alt" id="technical-seo" aria-labelledby="technical-seo-service">
+  <div class="wrap">
+<div class="grid split"><div class="span-6"><div class="label">Service 02</div><h2 id="technical-seo-service">Technical SEO</h2><div class="prose"><p>Technical SEO ensures that search engines can effectively crawl, understand, and index your website. Even the best content will underperform if technical issues prevent Google from properly reading your pages.</p><p>We conduct thorough technical audits and implement improvements across site architecture, crawlability, indexation, page speed, Core Web Vitals, structured data, and more.</p></div><ul class="ticks"><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>Crawlability and indexation analysis</span></li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>Core Web Vitals optimization</span></li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>Site architecture and URL structure</span></li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>Structured data / Schema.org markup</span></li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>Mobile usability and responsiveness</span></li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>Page speed and performance improvements</span></li></ul><div class="btn-row"><a href="technical-seo.html" class="btn btn--primary">Learn More About Technical SEO <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></div></div><div class="span-6 start-7"><div class="stack"><div class="card card--row"><div class="tile-icon"><svg class="icon" aria-hidden="true"><use href="#i-search"/></svg></div><div><h3>Crawlability</h3><p>Ensure search engines can find and index every important page.</p></div></div><div class="card card--row"><div class="tile-icon"><svg class="icon" aria-hidden="true"><use href="#i-bolt"/></svg></div><div><h3>Core Web Vitals</h3><p>Optimize for Google's page experience signals — LCP, CLS, and INP.</p></div></div><div class="card card--row"><div class="tile-icon"><svg class="icon" aria-hidden="true"><use href="#i-layers"/></svg></div><div><h3>Site Architecture</h3><p>Build a logical URL structure that helps Google understand your site.</p></div></div></div></div></div>
   </div>
 </section>
 
-<section class="section section--surface" aria-labelledby="keyword-research-service" id="keyword-research">
-  <div class="container">
-    <div class="section-header animate-on-scroll">
-      <div class="section-label">Service 04</div>
-      <h2 id="keyword-research-service" class="section-title">Keyword Research</h2>
-      <p class="section-subtitle">Identify the exact search terms your target customers are using, understand their intent, and build an SEO strategy around the opportunities that are most valuable to your business.</p>
-    </div>
-    <div class="grid grid--auto-3">
-      <div class="about-value-card animate-on-scroll delay-1">
-        <div class="about-value-icon">🎯</div>
-        <div class="about-value-title">Intent Analysis</div>
-        <div class="about-value-desc">Understand what users actually want when they search — whether they're researching, comparing, or ready to buy.</div>
-      </div>
-      <div class="about-value-card animate-on-scroll delay-2">
-        <div class="about-value-icon">📊</div>
-        <div class="about-value-title">Search Volume &amp; Competition</div>
-        <div class="about-value-desc">Identify keywords with sufficient search demand while evaluating competition to find your best opportunities.</div>
-      </div>
-      <div class="about-value-card animate-on-scroll delay-3">
-        <div class="about-value-icon">🗂️</div>
-        <div class="about-value-title">Keyword Mapping</div>
-        <div class="about-value-desc">Map keywords to specific pages across your site to create a clear, organized SEO targeting structure.</div>
-      </div>
-    </div>
+<section class="section g-main" aria-labelledby="on-page-seo-service">
+  <div class="wrap">
+<div class="grid split"><div class="span-6"><div class="label">Service 03</div><h2 id="on-page-seo-service">On-Page SEO</h2><div class="prose"><p>On-Page SEO is the process of optimizing individual web pages so they rank higher for targeted search queries and attract the right visitors. It ensures every page on your website is optimized to communicate relevance and value to both search engines and real users.</p></div><ul class="ticks"><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>Keyword research and targeting</span></li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>Title tags and meta descriptions</span></li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>Heading structure (H1, H2, H3)</span></li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>Content optimization for search intent</span></li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>Internal linking strategy</span></li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span>Image optimization and alt text</span></li></ul><div class="btn-row"><a href="on-page-seo.html" class="btn btn--primary">Learn More About On-Page SEO <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></div></div><div class="span-6 start-7"><div class="card serp"><div class="serp__label">Title Tag</div><div class="serp__title">SEO Services in Albuquerque, NM | Atlas Majesty LLC</div><div class="serp__url">www.atlasmajesty.com</div><div class="serp__desc">Professional SEO services in Albuquerque helping businesses rank higher on Google, attract qualified organic traffic, and generate more leads.</div><div class="badges"><span class="badge ">H1: Optimized</span><span class="badge ">Keywords: Targeted</span><span class="badge badge--ok">Meta: Compelling</span></div></div></div></div>
   </div>
 </section>
 
-<section class="section" aria-labelledby="content-seo-service">
-  <div class="container">
-    <div class="section-header animate-on-scroll">
-      <div class="section-label">Service 05</div>
-      <h2 id="content-seo-service" class="section-title">SEO Content</h2>
-      <p class="section-subtitle">Content that's genuinely useful, well-targeted, and strategically structured is one of the most powerful SEO assets a business can develop.</p>
-    </div>
-    <div class="grid grid--auto-3">
-      <div class="service-card animate-on-scroll delay-1">
-        <div class="service-card-icon">✍️</div>
-        <h3 class="service-card-title">Service Pages</h3>
-        <p class="service-card-desc">Optimized landing pages that communicate your value proposition and convert visitors into leads.</p>
-        <a href="seo-content.html" class="service-card-link">Learn More →</a>
-      </div>
-      <div class="service-card animate-on-scroll delay-2">
-        <div class="service-card-icon">📰</div>
-        <h3 class="service-card-title">Blog Content</h3>
-        <p class="service-card-desc">Educational articles and guides that attract organic traffic and establish your topical authority.</p>
-        <a href="seo-content.html" class="service-card-link">Learn More →</a>
-      </div>
-      <div class="service-card animate-on-scroll delay-3">
-        <div class="service-card-icon">🗺️</div>
-        <h3 class="service-card-title">Local Content</h3>
-        <p class="service-card-desc">Location-relevant content that helps your business rank in geographic searches and serve your local market.</p>
-        <a href="seo-content.html" class="service-card-link">Learn More →</a>
-      </div>
-    </div>
+<section class="section g-alt" id="keyword-research" aria-labelledby="keyword-research-service">
+  <div class="wrap">
+<div class="head"><div class="label">Service 04</div><h2 id="keyword-research-service">Keyword Research</h2><p>Identify the exact search terms your target customers are using, understand their intent, and build an SEO strategy around the opportunities that are most valuable to your business.</p></div>
+<div class="grid"><div class="tile span-4"><div class="tile-icon"><svg class="icon" aria-hidden="true"><use href="#i-target"/></svg></div><h3>Intent Analysis</h3><p>Understand what users actually want when they search — whether they're researching, comparing, or ready to buy.</p></div><div class="tile span-4"><div class="tile-icon"><svg class="icon" aria-hidden="true"><use href="#i-chart"/></svg></div><h3>Search Volume & Competition</h3><p>Identify keywords with sufficient search demand while evaluating competition to find your best opportunities.</p></div><div class="tile span-4"><div class="tile-icon"><svg class="icon" aria-hidden="true"><use href="#i-folder"/></svg></div><h3>Keyword Mapping</h3><p>Map keywords to specific pages across your site to create a clear, organized SEO targeting structure.</p></div></div>
   </div>
 </section>
 
-<section class="section section--surface" aria-labelledby="link-building-service" id="link-building">
-  <div class="container">
-    <div class="section-header animate-on-scroll">
-      <div class="section-label">Service 06</div>
-      <h2 id="link-building-service" class="section-title">Link Building</h2>
-      <p class="section-subtitle">Backlinks from relevant, authoritative websites signal trust and credibility to Google. A well-executed link building strategy strengthens your domain authority and supports long-term ranking improvements.</p>
-    </div>
-    <div class="grid grid--auto-3">
-      <div class="why-feature animate-on-scroll delay-1">
-        <div class="feature-icon">🔗</div>
-        <div><h3 class="feature-title">Quality Over Quantity</h3><p class="feature-desc">We focus on acquiring relevant, high-quality backlinks from reputable sources in your industry and local area.</p></div>
-      </div>
-      <div class="why-feature animate-on-scroll delay-2">
-        <div class="feature-icon">🌱</div>
-        <div><h3 class="feature-title">Sustainable Growth</h3><p class="feature-desc">Our approach builds authority gradually and naturally — the way Google expects and rewards over time.</p></div>
-      </div>
-      <div class="why-feature animate-on-scroll delay-3">
-        <div class="feature-icon">📍</div>
-        <div><h3 class="feature-title">Local Authority</h3><p class="feature-desc">Acquire links from local Albuquerque and New Mexico sources to strengthen your local search authority.</p></div>
-      </div>
-    </div>
+<section class="section g-main" aria-labelledby="content-seo-service">
+  <div class="wrap">
+<div class="head"><div class="label">Service 05</div><h2 id="content-seo-service">SEO Content</h2><p>Content that's genuinely useful, well-targeted, and strategically structured is one of the most powerful SEO assets a business can develop.</p></div>
+<div class="grid"><article class="card card--link span-4"><div class="tile-icon"><svg class="icon" aria-hidden="true"><use href="#i-pen"/></svg></div><h3>Service Pages</h3><p>Optimized landing pages that communicate your value proposition and convert visitors into leads.</p><a href="seo-content.html" class="link-more">Learn More<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></article><article class="card card--link span-4"><div class="tile-icon"><svg class="icon" aria-hidden="true"><use href="#i-file"/></svg></div><h3>Blog Content</h3><p>Educational articles and guides that attract organic traffic and establish your topical authority.</p><a href="seo-content.html" class="link-more">Learn More<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></article><article class="card card--link span-4"><div class="tile-icon"><svg class="icon" aria-hidden="true"><use href="#i-map"/></svg></div><h3>Local Content</h3><p>Location-relevant content that helps your business rank in geographic searches and serve your local market.</p><a href="seo-content.html" class="link-more">Learn More<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></article></div>
   </div>
 </section>
 
-<!-- CTA Section -->
-<section class="audit-section section">
-  <div class="container" style="text-align:center;position:relative;z-index:1;">
-    <div class="section-label section-label--amber" style="display:inline-flex;margin-bottom:1.5rem;">Get Started</div>
-    <h2 class="section-title section-title--white" style="max-width:650px;margin:0 auto 1rem;">Ready to Improve Your Search Rankings?</h2>
-    <p class="section-subtitle section-subtitle--white" style="margin-bottom:2.5rem;">Start with a free SEO audit to understand your current position and identify your biggest opportunities for growth.</p>
-    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
-      <a href="seo-audit.html" class="btn btn--primary btn--xl">Get Your Free SEO Audit →</a>
-      <a href="contact.html" class="btn btn--ghost btn--xl">Request a Consultation</a>
-    </div>
+<section class="section g-alt" id="link-building" aria-labelledby="link-building-service">
+  <div class="wrap">
+<div class="head"><div class="label">Service 06</div><h2 id="link-building-service">Link Building</h2><p>Backlinks from relevant, authoritative websites signal trust and credibility to Google. A well-executed link building strategy strengthens your domain authority and supports long-term ranking improvements.</p></div>
+<div class="grid"><div class="tile span-4"><div class="tile-icon"><svg class="icon" aria-hidden="true"><use href="#i-link"/></svg></div><h3>Quality Over Quantity</h3><p>We focus on acquiring relevant, high-quality backlinks from reputable sources in your industry and local area.</p></div><div class="tile span-4"><div class="tile-icon"><svg class="icon" aria-hidden="true"><use href="#i-sprout"/></svg></div><h3>Sustainable Growth</h3><p>Our approach builds authority gradually and naturally — the way Google expects and rewards over time.</p></div><div class="tile span-4"><div class="tile-icon"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg></div><h3>Local Authority</h3><p>Acquire links from local Albuquerque and New Mexico sources to strengthen your local search authority.</p></div></div>
+  </div>
+</section>
+
+<section class="close-band g-dark on-dark" aria-labelledby="cta-heading" data-bar-hide>
+  <div class="wrap close">
+    <div class="label">Get Started</div><h2 id="cta-heading">Ready to Improve Your Search Rankings?</h2><p>Start with a free SEO audit to understand your current position and identify your biggest opportunities for growth.</p><div class="btn-row"><a href="seo-audit.html" class="btn btn--primary">Get Your Free SEO Audit <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a><a href="contact.html" class="btn btn--secondary">Request a Consultation</a></div>
   </div>
 </section>
 
 </main>
 
-<!-- Footer -->
-<footer class="site-footer" role="contentinfo">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <a href="/" class="nav-logo" style="margin-bottom:1.25rem;display:inline-flex;">
-          <div class="nav-logo-icon"><img src="/images/brand/logo-mark-white.png" srcset="/images/brand/logo-mark-white.png 1x, /images/brand/logo-mark-white@2x.png 2x" width="44" height="24" alt=""></div>
-          <div class="nav-logo-text"><span class="nav-logo-name">Atlas Majesty</span><span class="nav-logo-tagline">SEO &amp; Digital Marketing</span></div>
-        </a>
-        <p>Helping businesses in Albuquerque and beyond improve their online visibility through strategic, results-focused SEO.</p>
-        <address class="footer-address"><strong>Atlas Majesty LLC</strong><br>1209 Mountain Road, Ste N<br>Albuquerque, NM 87110</address><p class="footer-email"><a href="mailto:support@atlasmajesty.com">support@atlasmajesty.com</a></p>
+<footer class="closing on-dark">
+  <div class="wrap">
+    <div class="grid directory">
+      <div class="span-5">
+        <a class="brand" href="/" aria-label="Atlas Majesty LLC — Home"><img src="/images/brand/logo-mark-white.png" srcset="/images/brand/logo-mark-white.png 1x, /images/brand/logo-mark-white@2x.png 2x" width="44" height="24" alt="" loading="lazy"><span>Atlas Majesty</span></a>
+        <p>Helping businesses in Albuquerque and beyond improve their online visibility, attract qualified organic traffic, and generate more leads through strategic SEO.</p>
+        <address itemscope itemtype="https://schema.org/PostalAddress">
+          <strong itemprop="name">Atlas Majesty LLC</strong><br>
+          <span itemprop="streetAddress">1209 Mountain Road, Ste N</span><br>
+          <span itemprop="addressLocality">Albuquerque</span>, <span itemprop="addressRegion">NM</span> <span itemprop="postalCode">87110</span>
+        </address>
+        <!-- TODO: phone (footer) -->
+        <a class="mail link" href="mailto:support@atlasmajesty.com" itemprop="email">support@atlasmajesty.com</a>
       </div>
-      <nav aria-label="SEO Services navigation"><div class="footer-nav-title">SEO Services</div>
-        <a href="seo-services.html" class="footer-nav-link">All SEO Services</a>
-        <a href="local-seo.html" class="footer-nav-link">Local SEO</a>
-        <a href="technical-seo.html" class="footer-nav-link">Technical SEO</a>
-        <a href="on-page-seo.html" class="footer-nav-link">On-Page SEO</a>
-        <a href="seo-content.html" class="footer-nav-link">SEO Content</a>
-        <a href="seo-audit.html" class="footer-nav-link">SEO Audit</a>
+      <nav class="span-2 start-7" aria-label="SEO Services navigation">
+        <h3>SEO Services</h3>
+        <a href="seo-services.html">All SEO Services</a>
+        <a href="local-seo.html">Local SEO</a>
+        <a href="technical-seo.html">Technical SEO</a>
+        <a href="on-page-seo.html">On-Page SEO</a>
+        <a href="seo-content.html">SEO Content</a>
+        <a href="seo-audit.html">SEO Audit</a>
       </nav>
-      <nav aria-label="Company navigation"><div class="footer-nav-title">Company</div>
-        <a href="about.html" class="footer-nav-link">About Us</a>
-        <a href="blog/index.html" class="footer-nav-link">Blog</a>
-        <a href="contact.html" class="footer-nav-link">Contact</a>
+      <nav class="span-2" aria-label="Company navigation">
+        <h3>Company</h3>
+        <a href="about.html">About Us</a>
+        <a href="blog/index.html">Blog &amp; SEO Resources</a>
+        <a href="contact.html">Contact</a>
+        <a href="seo-audit.html">Free SEO Audit</a>
       </nav>
-      <nav aria-label="Legal navigation"><div class="footer-nav-title">Legal</div>
-        <a href="privacy-policy.html" class="footer-nav-link">Privacy Policy</a>
-        <a href="terms-of-service.html" class="footer-nav-link">Terms of Service</a>
-        <a href="cookie-policy.html" class="footer-nav-link">Cookie Policy</a>
+      <nav class="span-2" aria-label="Legal navigation">
+        <h3>Legal</h3>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms-of-service.html">Terms of Service</a>
+        <a href="cookie-policy.html">Cookie Policy</a>
       </nav>
     </div>
-    <div class="footer-bottom">
-      <p class="footer-copyright">&copy; <span id="copyright-year">2026</span> Atlas Majesty LLC. All rights reserved. · Albuquerque, NM 87110</p>
-      <div class="footer-legal"><a href="privacy-policy.html">Privacy Policy</a><a href="terms-of-service.html">Terms of Service</a><a href="sitemap.xml">Sitemap</a></div>
+    <div class="legal">
+      <p>&copy; 2026 Atlas Majesty LLC. All rights reserved. · Albuquerque, NM 87110</p>
+      <div><a href="privacy-policy.html">Privacy Policy</a><a href="terms-of-service.html">Terms of Service</a><a href="sitemap.xml">Sitemap</a></div>
     </div>
   </div>
 </footer>
-<button id="back-to-top" aria-label="Back to top">↑</button>
-<script src="js/main.js" defer></script>
-<script src="js/interactions.js" defer></script>
-<script src="js/forms.js" defer></script>
+
+<div class="actionbar on-dark" data-actionbar><a class="btn btn--primary" href="seo-audit.html">Get Your Free SEO Audit</a></div>
+
+<script src="js/site.js" defer></script>
 </body>
 </html>
