@@ -164,8 +164,8 @@ document.addEventListener('DOMContentLoaded', function () {
       msg.innerHTML = `
         <div style="text-align:center;padding:2rem;">
           <div style="font-size:3rem;margin-bottom:1rem;">✅</div>
-          <h3 style="color:#0A1628;margin-bottom:0.5rem;">Message Received!</h3>
-          <p style="color:#64748B;">Thank you for reaching out. We'll be in touch shortly.</p>
+          <h3 style="color:var(--brand-darkest);margin-bottom:0.5rem;">Message Received!</h3>
+          <p style="color:var(--color-text-muted);">Thank you for reaching out. We'll be in touch shortly.</p>
         </div>
       `;
       form.parentElement.insertBefore(msg, form.nextSibling);
@@ -181,7 +181,7 @@ document.addEventListener('DOMContentLoaded', function () {
       form.insertBefore(errorEl, form.firstChild);
     }
     errorEl.textContent = message;
-    errorEl.style.cssText = 'background:#FEF2F2;color:#DC2626;padding:1rem;border-radius:0.5rem;margin-bottom:1rem;border:1px solid #FECACA;';
+    errorEl.style.cssText = 'background:#FEF2F2;color:#B91C1C;padding:1rem;border-radius:0.5rem;margin-bottom:1rem;border:1px solid #FECACA;';
   }
 
 });

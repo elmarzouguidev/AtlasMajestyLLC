@@ -97,7 +97,7 @@ a, button, .btn, [role="button"], .faq-question,
 .using-keyboard textarea:focus,
 .using-keyboard select:focus,
 .using-keyboard [tabindex]:focus {
-  outline: 3px solid var(--color-blue);
+  outline: 3px solid var(--brand-primary);
   outline-offset: 3px;
   border-radius: var(--radius-sm);
 }
@@ -122,7 +122,7 @@ a, button, .btn, [role="button"], .faq-question,
   width: 100%;
   transform: scaleX(0);
   transform-origin: 0 50%;
-  background: linear-gradient(90deg, var(--color-blue), var(--color-amber));
+  background: linear-gradient(90deg, var(--brand-primary), var(--brand-accent));
   will-change: transform;
 }
 
@@ -268,7 +268,7 @@ a, button, .btn, [role="button"], .faq-question,
 
 .btn--ghost .btn-ripple,
 .btn--secondary .btn-ripple {
-  background: rgba(37, 99, 235, 0.22);
+  background: rgba(var(--brand-primary-rgb), 0.22);
 }
 
 @keyframes btn-ripple {
@@ -323,7 +323,7 @@ a, button, .btn, [role="button"], .faq-question,
   transition: opacity var(--transition-base);
   background: radial-gradient(
     360px circle at var(--spot-x) var(--spot-y),
-    rgba(37, 99, 235, 0.10),
+    rgba(var(--brand-primary-rgb), 0.10),
     transparent 62%
   );
 }
@@ -409,8 +409,8 @@ a:hover + .copy-btn,
 .copy-btn:hover,
 .copy-btn:focus-visible {
   opacity: 1;
-  color: var(--color-blue);
-  border-color: var(--color-blue);
+  color: var(--brand-primary);
+  border-color: var(--brand-primary);
 }
 
 .copy-btn.is-copied {
@@ -456,9 +456,9 @@ html:not(.js-enabled) .img-fade {
 .toc-link.is-current,
 .section-nav a.is-current,
 [data-scrollspy] a.is-current {
-  color: var(--color-blue);
+  color: var(--brand-primary);
   font-weight: var(--fw-semibold);
-  border-left-color: var(--color-blue);
+  border-left-color: var(--brand-primary);
 }
 
 /* ============================================================
