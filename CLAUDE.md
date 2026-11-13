@@ -1,6 +1,6 @@
 # CLAUDE.md — Atlas Majesty LLC website
 
-Static marketing site (HTML, CSS, vanilla JS) for **Atlas Majesty LLC**, an SEO & digital marketing agency in Albuquerque, NM. The site was rebranded from "Solution Express Media LLC"; that old name, domain and email must never reappear.
+Static marketing site (HTML, CSS, vanilla JS) for **Atlas Majesty LLC**, an SEO & digital marketing agency in Sheridan, WY. The site was rebranded from "Solution Express Media LLC"; that old name, domain and email must never reappear.
 
 ## Git rules (strict)
 - Never create, switch to, or delete git branches. Always work on the main branch.
