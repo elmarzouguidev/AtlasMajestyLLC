@@ -1,7 +1,7 @@
 <?php
 /**
  * Atlas Majesty LLC — send.php
- * Receives the audit and contact forms, validates them on the server and emails support@atlasmajesty.com.
+ * Receives the audit and contact forms, validates them on the server and emails contact@atlasmajesty.com.
  *
  *  - POST only; answers with JSON.
  *  - Honeypot field "company_url" (hidden in the form; bots fill it, people never see it).
@@ -11,8 +11,8 @@
 
 declare(strict_types=1);
 
-const MAIL_TO       = 'support@atlasmajesty.com';
-const MAIL_FROM     = 'support@atlasmajesty.com';   // must be on your own domain so mail() is not flagged as spoofed
+const MAIL_TO       = 'contact@atlasmajesty.com';
+const MAIL_FROM     = 'contact@atlasmajesty.com';   // must be on your own domain so mail() is not flagged as spoofed
 const SITE_NAME     = 'Atlas Majesty LLC website';
 const RATE_MAX      = 5;                            // submissions allowed ...
 const RATE_WINDOW   = 600;                          // ... per this many seconds, per IP
@@ -98,8 +98,7 @@ $forms = [
         'website'   => ['label' => 'your website URL',   'required' => true,  'type' => 'url'],
         'email'     => ['label' => 'your email address', 'required' => true,  'type' => 'email'],
         'phone'     => ['label' => 'your phone number',  'required' => false, 'type' => 'phone'],
-        'challenge' => ['label' => 'your main challenge', 'required' => false, 'type' => 'choice',
-                        'choices' => ['low-rankings', 'no-traffic', 'local-visibility', 'competitors', 'technical', 'no-leads', 'other']],
+        'challenge' => ['label' => 'your main challenge', 'required' => false, 'type' => 'text'],
         'message'   => ['label' => 'additional details', 'required' => false, 'type' => 'text', 'multiline' => true],
         'notes'     => ['label' => 'additional notes',   'required' => false, 'type' => 'text', 'multiline' => true],
     ],
@@ -161,11 +160,6 @@ foreach ($forms[$formKey] as $name => $def) {
         case 'phone':
             if (!preg_match('/^[\d\s\-+().]{7,20}$/', $value)) {
                 $errors[$name] = 'Use digits only, for example 505 555 0100.';
-            }
-            break;
-        case 'choice':
-            if (!in_array($value, $def['choices'], true)) {
-                $errors[$name] = 'Choose one of the options.';
             }
             break;
     }

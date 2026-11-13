@@ -111,12 +111,12 @@
             var f = form.querySelector('[name="' + name + '"]');
             if (f) { setError(f, errs[name]); if (!firstBad) firstBad = f; }
           });
-          say(form, (res.body && res.body.message) || 'We could not send your request. Please try again, or email support@atlasmajesty.com.', 'error');
+          say(form, (res.body && res.body.message) || 'We could not send your request. Please try again, or email contact@atlasmajesty.com.', 'error');
           if (firstBad) firstBad.focus();
         })
         .catch(function () {
           clearTimeout(slow);
-          say(form, 'We could not reach the server. Your answers are still here. Please try again, or email support@atlasmajesty.com.', 'error');
+          say(form, 'We could not reach the server. Your answers are still here. Please try again, or email contact@atlasmajesty.com.', 'error');
         })
         .then(function () { busy = false; btn.disabled = false; });
     });

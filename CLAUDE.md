@@ -15,7 +15,7 @@ Static marketing site (HTML, CSS, vanilla JS) for **Atlas Majesty LLC**, an SEO 
 
 ## Brand
 - Full name: Atlas Majesty LLC · Short name: Atlas Majesty
-- Domain: https://www.atlasmajesty.com · Email: support@atlasmajesty.com
+- Domain: https://www.atlasmajesty.com · Email: contact@atlasmajesty.com
 - Address: 1209 Mountain Road, Ste N, Albuquerque, NM 87110
 - Phone: TODO (not provided yet; do not add placeholders)
 - Tagline: SEO & Digital Marketing
@@ -84,7 +84,7 @@ Redesign constraints:
 - **Header/nav:** opaque, fixed, hairline, no blur or shadow. Bar items: SEO Services (flat panel), Local SEO, About, Blog, Contact, plus the one primary button. "Home" and "Free Audit" are not in the bar (the logo and the button cover them); the footer keeps both links. Phones get a full-screen menu and a bottom action bar.
 - **FAQ:** open in full (ruled rows, no accordion), matching the FAQPage JSON-LD.
 - **Motion:** hero entrance once on load; one type-led moment per page (words settle from soft to full on scroll). Transform/opacity only, gated by `prefers-reduced-motion`. No scroll fade-ins. Hover styles only inside `@media (hover: hover)`. Press: 1px sink and scale .985; hover lifts 1px; linked cards lift 2px.
-- **Forms:** no mailto and no fake success. `js/forms.js` posts with `fetch()` to `send.php` and shows "sent" only on a successful JSON response; errors appear under their fields or in the status line. `send.php`: POST only, server-side validation, honeypot field `company_url`, per-IP rate limit, same-origin check, email to support@atlasmajesty.com via `mail()` (switch to SMTP later in `send_mail()`). Field names and order never change.
+- **Forms:** no mailto and no fake success. `js/forms.js` posts with `fetch()` to `send.php` and shows "sent" only on a successful JSON response; errors appear under their fields or in the status line. `send.php`: POST only, server-side validation, honeypot field `company_url`, per-IP rate limit, same-origin check, email to contact@atlasmajesty.com via `mail()` (switch to SMTP later in `send_mail()`). Field names and order never change.
 - **Images:** the blog and local-SEO JPGs with text baked into the pixels were removed from the design; none may be reintroduced. Pictures are live-text-free, have width/height, lazy-load below the fold, and content images get a 1px black 10% inset outline.
 - **Icons:** one outline SVG sprite, `currentColor`, 1.5px rendered stroke. No emoji.
 - **Budget per page:** CSS under 60 KB, JS under 30 KB, no layout shift from fonts, images or the header, only the fonts and weights in use.
