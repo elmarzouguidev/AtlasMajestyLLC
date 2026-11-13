@@ -16,8 +16,8 @@ Static marketing site (HTML, CSS, vanilla JS) for **Atlas Majesty LLC**, an SEO 
 ## Brand
 - Full name: Atlas Majesty LLC · Short name: Atlas Majesty
 - Domain: https://www.atlasmajesty.com · Email: contact@atlasmajesty.com
-- Address: 1209 Mountain Road, Ste N, Albuquerque, NM 87110
-- Phone: TODO (not provided yet; do not add placeholders)
+- Address: 30 N Gould St Ste R, Sheridan, WY 82801
+- Phone: +1 (808) 301-7961 (link as `tel:+18083017961`; JSON-LD `+1-808-301-7961`)
 - Tagline: SEO & Digital Marketing
 - Logo source: `images/brand/atlas-majesty-logo.jpeg` (never modify or delete). Generated variants live in `images/brand/`.
 - Use the white logo on dark backgrounds and the burgundy logo on light ones.

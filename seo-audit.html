@@ -82,7 +82,6 @@
     <a class="brand" href="/" aria-label="Atlas Majesty LLC — Home">
       <img src="/images/brand/logo-mark-white.png" srcset="/images/brand/logo-mark-white.png 1x, /images/brand/logo-mark-white@2x.png 2x" width="44" height="24" alt=""><span>Atlas Majesty</span>
     </a>
-    <!-- TODO: phone (header) -->
     <nav class="nav__links" aria-label="Main navigation">
       <div class="nav__item" data-dd>
         <button class="nav__link" type="button" aria-expanded="false" aria-controls="services-panel" aria-current="true">SEO Services <svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg></button>
@@ -103,6 +102,7 @@
       <a class="nav__link" href="contact.html">Contact</a>
     </nav>
     <div class="nav__end">
+      <a class="nav__phone" href="tel:+18083017961">+1 (808) 301-7961</a>
       <a class="btn btn--primary" href="seo-audit.html" id="nav-cta-btn">Get Free SEO Audit</a>
       <button class="nav__toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="menu" aria-label="Open navigation menu"><svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg></button>
     </div>
@@ -130,6 +130,10 @@
       <a class="sheet__row" href="blog/index.html">Blog</a>
       <a class="sheet__row" href="contact.html">Contact</a>
     </div>
+    <div class="sheet__group">
+      <div class="sheet__title">Phone</div>
+      <a class="sheet__row" href="tel:+18083017961">+1 (808) 301-7961</a>
+    </div>
     <div class="sheet__bottom"><a class="btn btn--primary" href="seo-audit.html">Get Your Free SEO Audit <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
   </div>
 </div>
@@ -153,7 +157,7 @@
 <div class="grid split"><div class="span-5"><div class="label">Actionable Insights</div><h2>What You'll Discover in Your Custom Audit Report</h2><div class="prose"><p data-hl>We inspect the critical factors that search engines evaluate when ranking websites. Rather than generic automated scores, we highlight practical, revenue-focused improvements.</p></div><ul class="ticks"><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span><strong>Technical SEO &amp; Crawlability:</strong> Indexation status, broken links, redirect issues, XML sitemap validation, and mobile performance.</span></li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span><strong>On-Page Optimization:</strong> Title tags, meta descriptions, heading structure, and keyword placement review.</span></li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span><strong>Keyword &amp; Competitor Analysis:</strong> Uncover keywords you should be targeting and where competitors hold an advantage.</span></li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span><strong>Local SEO &amp; Google Maps:</strong> Google Business Profile status, NAP consistency, and local citation visibility in Albuquerque.</span></li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span><strong>Core Web Vitals &amp; Speed:</strong> Loading metrics (LCP, CLS, INP) impacting user experience and Google ranking.</span></li><li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span><strong>Backlink &amp; Domain Authority:</strong> Overview of your existing link profile and authority opportunities.</span></li></ul><div class="callout"><strong>100% Confidential &amp; No Obligation.</strong> We analyze your public website data and provide actionable recommendations you can implement right away.</div></div><div class="span-6 start-7"><div class="form-card"><h3 id="form-heading">Request Your Free Audit</h3><p>Enter your website details below to get started.</p><form class="form" data-form="audit" action="send.php" method="post" aria-labelledby="form-heading" novalidate>
 <div class="form__row form__row--2"><div class="field"><label for="audit-page-name">Full Name <span aria-hidden="true">*</span></label><input id="audit-page-name" type="text" name="name" placeholder="John Doe" data-validate="required" required aria-describedby="audit-page-name-err"><span class="field__error" id="audit-page-name-err"></span></div><div class="field"><label for="audit-page-business">Business Name <span aria-hidden="true">*</span></label><input id="audit-page-business" type="text" name="business" placeholder="Acme Business LLC" data-validate="required" required aria-describedby="audit-page-business-err"><span class="field__error" id="audit-page-business-err"></span></div></div>
 <div class="field"><label for="audit-page-url">Website URL <span aria-hidden="true">*</span></label><input id="audit-page-url" type="url" name="website" placeholder="https://example.com" data-validate="url" required aria-describedby="audit-page-url-err"><span class="field__error" id="audit-page-url-err"></span></div>
-<div class="form__row form__row--2"><div class="field"><label for="audit-page-email">Work Email <span aria-hidden="true">*</span></label><input id="audit-page-email" type="email" name="email" placeholder="john@example.com" data-validate="email" required aria-describedby="audit-page-email-err"><span class="field__error" id="audit-page-email-err"></span></div><div class="field"><label for="audit-page-phone">Phone Number <span class="opt">(optional)</span></label><input id="audit-page-phone" type="tel" name="phone" placeholder="(505) 000-0000" data-validate="phone" aria-describedby="audit-page-phone-err"><span class="field__error" id="audit-page-phone-err"></span></div></div>
+<div class="form__row form__row--2"><div class="field"><label for="audit-page-email">Work Email <span aria-hidden="true">*</span></label><input id="audit-page-email" type="email" name="email" placeholder="john@example.com" data-validate="email" required aria-describedby="audit-page-email-err"><span class="field__error" id="audit-page-email-err"></span></div><div class="field"><label for="audit-page-phone">Phone Number <span class="opt">(optional)</span></label><input id="audit-page-phone" type="tel" name="phone" placeholder="(555) 555-0100" data-validate="phone" aria-describedby="audit-page-phone-err"><span class="field__error" id="audit-page-phone-err"></span></div></div>
 <div class="field"><label for="audit-page-challenge">Primary SEO Challenge</label><select id="audit-page-challenge" name="challenge" aria-describedby="audit-page-challenge-err"><option value="">Select your main goal / issue...</option><option value="not-ranking">Not ranking on Google page 1</option><option value="local-maps">Need more calls & Albuquerque Maps visibility</option><option value="traffic-drop">Sudden drop in website traffic</option><option value="new-website">New website that needs organic foundation</option><option value="competitors">Outranked by local competitors</option><option value="other">Other / General assessment</option></select><span class="field__error" id="audit-page-challenge-err"></span></div>
 <div class="field"><label for="audit-page-notes">Notes or Specific Target Keywords <span class="opt">(optional)</span></label><textarea id="audit-page-notes" name="notes" placeholder="Tell us about the keywords or locations you care about most..." rows="3" aria-describedby="audit-page-notes-err"></textarea><span class="field__error" id="audit-page-notes-err"></span></div>
 <div class="hp" aria-hidden="true"><label for="audit-page-hp">Leave this field empty</label><input type="text" id="audit-page-hp" name="company_url" tabindex="-1" autocomplete="off"></div>
@@ -174,10 +178,10 @@
         <p>Helping businesses in Albuquerque and beyond improve their online visibility, attract qualified organic traffic, and generate more leads through strategic SEO.</p>
         <address itemscope itemtype="https://schema.org/PostalAddress">
           <strong itemprop="name">Atlas Majesty LLC</strong><br>
-          <span itemprop="streetAddress">1209 Mountain Road, Ste N</span><br>
-          <span itemprop="addressLocality">Albuquerque</span>, <span itemprop="addressRegion">NM</span> <span itemprop="postalCode">87110</span>
+          <span itemprop="streetAddress">30 N Gould St Ste R</span><br>
+          <span itemprop="addressLocality">Sheridan</span>, <span itemprop="addressRegion">WY</span> <span itemprop="postalCode">82801</span>
         </address>
-        <!-- TODO: phone (footer) -->
+        <a class="mail link" href="tel:+18083017961" itemprop="telephone">+1 (808) 301-7961</a>
         <a class="mail link" href="mailto:contact@atlasmajesty.com" itemprop="email">contact@atlasmajesty.com</a>
       </div>
       <nav class="span-2 start-7" aria-label="SEO Services navigation">
@@ -204,7 +208,7 @@
       </nav>
     </div>
     <div class="legal">
-      <p>&copy; 2026 Atlas Majesty LLC. All rights reserved. · Albuquerque, NM 87110</p>
+      <p>&copy; 2026 Atlas Majesty LLC. All rights reserved. · Sheridan, WY 82801</p>
       <div><a href="privacy-policy.html">Privacy Policy</a><a href="terms-of-service.html">Terms of Service</a><a href="sitemap.xml">Sitemap</a></div>
     </div>
   </div>
