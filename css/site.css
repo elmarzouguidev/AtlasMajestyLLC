@@ -273,7 +273,7 @@
   .card p { color: var(--color-text-mid); }
   .card--link { transition-property: translate, box-shadow; transition-duration: 180ms; transition-timing-function: ease-out; }
   .card--link .link-more { margin-top: auto; padding-top: var(--s-2); display: inline-flex; align-items: center; gap: var(--s-2); font-weight: 500; }
-  .card--link .link-more::after { content: ""; position: absolute; inset: 0; border-radius: var(--r-lg); }
+  .card--link a.link-more::after { content: ""; position: absolute; inset: 0; border-radius: var(--r-lg); }
   .card--link:has(.link-more:focus-visible) { outline: 2px solid var(--focus); outline-offset: 3px; }
   .card--link .icon { width: 1em; height: 1em; stroke-width: 2px; transition: translate 150ms ease-out; }
   @media (hover: hover) {
